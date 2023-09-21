@@ -3,11 +3,10 @@ interface IFormLoginProps {
 };
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../Button";
+import Button from "../../FormComponents/Button";
 
-import Input from "../Input";
+import Input from "../../FormComponents/Input";
 
-import "./style.css";
  const Login:React.FC<IFormLoginProps> = ({TitleBox}):JSX.Element  =>{
  
    return(
@@ -15,10 +14,10 @@ import "./style.css";
       <h1 className="font-bold text-center">{TitleBox}</h1>
       <form>
       {/* Email input  */}
-      <Input   LabelName="ایمیل" LabelFor="UserEmail" InputType="text"/>
+      <Input LabelName="ایمیل" LabelFor="UserEmail" InputType="text" />
 
       {/* Password input */}
-      <Input   LabelName="رمز عبور" LabelFor="UserPass" InputType="password"/>
+      <Input LabelName="رمز عبور" LabelFor="UserPass" InputType="password" />
 
       {/* Forgot password link */}
       <div className="mb-6 flex items-center justify-between">            
