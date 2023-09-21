@@ -1,6 +1,7 @@
 import React from "react"
 import Header from "../Header"
 import Login from "./Login";
+import Register from "./Register";
 import "./style.css";
 const LoginRegister:React.FC = () :JSX.Element =>{
 return(
@@ -12,6 +13,12 @@ return(
             <Login TitleBox="به کوئرا تسک منیجر خوش برگشتی :)"/>
             </div>
          </div>
+
+         {/* <div className="row justify-center">
+            <div className="lg:w-[50%] md:w-[80%] card  md:mt-50 mt-10">
+            <Register TitleBox="ثبت‌نام در کوئرا تسک منیجر"/>
+            </div>
+         </div> */}
      </div> 
 
      
