@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Iran-Yekan";
+  src: url("../assets/fonts/Yekan.ttf"),url("../assets/fonts/Yekan.eot"),
+  url("../assets/fonts/Yekan.woff"),url("../assets/fonts/Yekan.woff2");
+}
+body,*:not(i){
+  font-family: "Iran-Yekan";
+}

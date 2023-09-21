@@ -1,0 +1,11 @@
+.backColor::before{
+    content: '';
+    position: fixed;
+    width: 150%;
+    height: 61%;
+    bottom: -26%;
+    right: -12%;
+    background: rgb(84,190,232);
+    background: linear-gradient(90deg, rgba(84,190,232,1) 1%, rgba(6,132,111,1) 56%);
+    transform: rotate(-10deg);
+}
