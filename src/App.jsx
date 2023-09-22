@@ -1,13 +1,13 @@
 import "./App.css";
 import Router from "./Router";
-
+import New_work_space from "./new-work-space";
 function App() {
   return (
     <>
-      <h1 className=" text-3xl font-bold underline text-center hover:text-blue-700">
-        Hello world!
-      </h1>
+      <New_work_space />
+     
       <Router />
+      
     </>
   );
 }
