@@ -3,10 +3,10 @@ interface IFormRegisterProps {
 };
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../../FormComponents/Button";
-import Checkbox from "../../FormComponents/Checkbox";
+import Button from "../../ShareComponent/Button";
+import Checkbox from "../../ShareComponent/Checkbox";
 
-import Input from "../../FormComponents/Input";
+import Input from "../../ShareComponent/Input";
 
  const Register:React.FC<IFormRegisterProps> = ({TitleBox}):JSX.Element  =>{
  

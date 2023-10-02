@@ -3,15 +3,17 @@ interface IFormLoginProps {
 };
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../../FormComponents/Button";
+import Button from "../../ShareComponent/Button";
+import ForwardArrow from "../../ShareComponent/Icons/ForwardArrow";
 
-import Input from "../../FormComponents/Input";
+import Input from "../../ShareComponent/Input";
 
  const Login:React.FC<IFormLoginProps> = ({TitleBox}):JSX.Element  =>{
  
    return(
       <>
-      <h1 className="font-bold text-center">{TitleBox}</h1>
+      <h1 className="font-bold text-center">{TitleBox}</h1>  
+      <ForwardArrow></ForwardArrow>   
       <form>
       {/* Email input  */}
       <Input LabelName="ایمیل" LabelFor="UserEmail" InputType="text" />
