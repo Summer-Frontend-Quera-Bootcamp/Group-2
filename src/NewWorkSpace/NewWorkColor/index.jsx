@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet';
-function second_page() {
+function New_work_color() {
     return (
     <>
         <Helmet>
@@ -9,30 +9,32 @@ function second_page() {
         />
         <link href='https://unpkg.com/css.gg@2.0.0/icons/css/unavailable.css' rel='stylesheet'></link>
       </Helmet>
-         <div className='mt-6 mr-6'>
-    <div className="flex space-x-5">
+
+    {/*Page2*/}
+  <div className='mr-10' style={{display:'flex', flexDirection:"column",  alignItems:"center"}}>
+    <div className="mt-6" style={{display:"flex" , width:"453px", justifyContent:"space-between" , alignItems:"center"}}>
     <button className="w-24">
-    <i className='bx bx-arrow-back'style={{fontSize: '24px' }}></i>
+    <i className='bx bx-arrow-back'style={{fontSize: '24px'}}></i>
     </button>
       <h1 className="text-center font-semibold font-yekan text-3xl flex-1 w-64">
         انتخاب رنگ ورک اسپیس
       </h1>
       <button className="w-6 h-6 pr-0"><i className='bx bx-x'style={{fontSize: '24px' }}></i></button>
     </div>
-    </div>
+    <div className='h-20'></div>
 
-    <div className='flex flex-row-reverse p-10'>
+  <div style={{display:"flex" , width:"453px" , justifyContent:"flex-end", alignItems: "flex-start" , flexDirection:"row-reverse"}}>
+  <div className='pl-5'>
        <div className="bg-[#7D828C] pb-4" style={{width:'70px' , height:'70px', color:'#FFFFFF', borderRadius:'8px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-       <p className="flex content-center font-yekan" style={{width:"46px" , height:"37" , fontSize:"25px" , marginTop:20 , marginLeft:5}}>ت ط</p>
+       <p className="font-yekan" style={{textTransform:"capitalize", fontSize:"24px" , marginTop:20, fontStyle:"normal" , lineHeight:"32px" , textAlign:"center"}}>ت ط</p>
       </div>
-    </div>  
-
-<div className='' style={{boxSizing:'border-box'}}>
-    <div className="p-8 pl-6" style={{left:10 , lineHeight:'16.41px'}}>
-      <p className="font-yekan flex flex-row-reverse">رنگ ورک اسپیس</p>
+      </div>
+<div className='pl-16' style={{display:"flex" , flexDirection:"column" , alignItems:"flex-end"}}>
+    <div className="" style={{}}>
+      <p className="font-yekan flex flex-row-reverse pr-2 pb-3">رنگ ورک اسپیس</p>
     </div>
     
-    <div className="pl-8 box-content flex flex-col items-center">
+    <div className="" style={{display:"flex" , width:"293px", justifyContent:"flex-end" ,alignContent:"center",alignItems:"center", gap:"10px" , flexWrap:"wrap"}}>
     <div className="pl-2 flex flex-row-reverse">
   
         <button className="flex flex-none order-0 flex-grow-0"><i className='gg-unavailable' style={{fontSize: '20px' }}></i></button> 
@@ -68,6 +70,8 @@ function second_page() {
       </div>
 </div>
 </div>
+</div>
+</div>
 <div className="flex justify-center mt-2">
       <button className="text-white bg-brand-primary border border-none rounded-lg font-yekan" style={{ width: '415px', height: '40px', color:'#fff'}}>ادامه</button>
       </div>
@@ -76,4 +80,4 @@ function second_page() {
 }
 
 
-export default second_page;
+export default New_work_color;

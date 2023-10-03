@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet';
 import { useState } from "react";
-import second_page from './second';
+import New_work_color from './NewWorkColor';
 
 function New_work_space() {
   const [openModal , setOpenModal] = useState(false);
@@ -36,7 +36,7 @@ function New_work_space() {
     <div className="flex justify-center mt-2">
       <button className="text-white bg-brand-primary border border-none rounded-lg font-yekan" style={{ width: '415px', height: '40px', color:'#fff'}}
        onClick={()=>{setOpenModal(true);}}>ادامه</button>
-       {openModal && <second_page />}
+       {openModal &&  <New_work_color />}
       </div>
 </div>
     </>

@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet';
-function thirdPage() {
+function New_work_info() {
     return (
     <>
           <Helmet>
@@ -49,4 +49,4 @@ function thirdPage() {
 }
 
 
-export default thirdPage;
+export default New_work_info;
