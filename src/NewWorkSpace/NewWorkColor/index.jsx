@@ -1,5 +1,8 @@
 import { Helmet } from 'react-helmet';
+import { useState } from 'react';
+import New_work_info from '../NewWorkInfo';
 function New_work_color() {
+  const [openModal , setOpenModal] = useState(false);
     return (
     <>
         <Helmet>
@@ -29,7 +32,7 @@ function New_work_color() {
        <p className="font-yekan" style={{textTransform:"capitalize", fontSize:"24px" , marginTop:20, fontStyle:"normal" , lineHeight:"32px" , textAlign:"center"}}>ت ط</p>
       </div>
       </div>
-<div className='pl-16' style={{display:"flex" , flexDirection:"column" , alignItems:"flex-end"}}>
+<div className='pl-20' style={{display:"flex" , flexDirection:"column" , alignItems:"flex-end"}}>
     <div className="" style={{}}>
       <p className="font-yekan flex flex-row-reverse pr-2 pb-3">رنگ ورک اسپیس</p>
     </div>
@@ -73,7 +76,8 @@ function New_work_color() {
 </div>
 </div>
 <div className="flex justify-center mt-2">
-      <button className="text-white bg-brand-primary border border-none rounded-lg font-yekan" style={{ width: '415px', height: '40px', color:'#fff'}}>ادامه</button>
+      <button className="text-white bg-brand-primary border border-none rounded-lg font-yekan" style={{ width: '415px', height: '40px', color:'#fff'}} onClick={()=>{setOpenModal(true);}}>ادامه</button> 
+      {openModal &&  <New_work_info />}
       </div>
     </>
     );
