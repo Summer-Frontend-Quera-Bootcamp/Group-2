@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet';
 import { useState } from 'react';
 import New_work_info from '../NewWorkInfo';
-function New_work_color() {
+function New_work_color({closeModal}) {
   const [openModal , setOpenModal] = useState(false);
     return (
     <>
@@ -14,15 +14,17 @@ function New_work_color() {
       </Helmet>
 
     {/*Page2*/}
+     <div style={{height: "100%" , width:"100%" , position:"fixed", display:"flex" , top:0 , backgroundColor:"white"}}></div>
+    <div style={{display: "inline-flex", width:"501px",flexDirection:"column", alignItems:"center" , justifyContent:"center" , paddingLeft:"35px" , paddingBottom:"20px" , boxShadow:"rgba(0,0,0,0.35) 0px 5px 15px" , position:"fixed" , marginRight:"45px", marginTop:"-265px"}}>
   <div className='mr-10' style={{display:'flex', flexDirection:"column",  alignItems:"center"}}>
     <div className="mt-6" style={{display:"flex" , width:"453px", justifyContent:"space-between" , alignItems:"center"}}>
-    <button className="w-24">
+    <button className="w-24" onClick={()=>{closeModal(false)}}>
     <i className='bx bx-arrow-back'style={{fontSize: '24px'}}></i>
     </button>
       <h1 className="text-center font-semibold font-yekan text-3xl flex-1 w-64">
         انتخاب رنگ ورک اسپیس
       </h1>
-      <button className="w-6 h-6 pr-0"><i className='bx bx-x'style={{fontSize: '24px' }}></i></button>
+      <button className="w-6 h-6 pr-0" onClick={()=>{closeModal(false)}}><i className='bx bx-x'style={{fontSize: '24px' }}></i></button>
     </div>
     <div className='h-20'></div>
 
@@ -76,8 +78,9 @@ function New_work_color() {
 </div>
 </div>
 <div className="flex justify-center mt-2">
-      <button className="text-white bg-brand-primary border border-none rounded-lg font-yekan" style={{ width: '415px', height: '40px', color:'#fff'}} onClick={()=>{setOpenModal(true);}}>ادامه</button> 
-      {openModal &&  <New_work_info />}
+      <button className="text-white bg-brand-primary border border-none rounded-lg font-yekan" style={{ width: '415px', height: '40px', color:'#fff'}} onClick={()=>{setOpenModal(true)}}>ادامه</button> 
+      {openModal &&  <New_work_info  closeModal={setOpenModal}/>}
+      </div>
       </div>
     </>
     );
