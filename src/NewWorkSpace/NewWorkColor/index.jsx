@@ -3,6 +3,11 @@ import { useState } from 'react';
 import New_work_info from '../NewWorkInfo';
 function New_work_color({closeModal}) {
   const [openModal , setOpenModal] = useState(false);
+  // const [view, setView] = useState('list');
+
+  // const handleChange = (event, nextView) => {
+  //   setView(nextView);
+  // };
     return (
     <>
         <Helmet>
@@ -44,7 +49,9 @@ function New_work_color({closeModal}) {
   
         <button className="flex flex-none order-0 flex-grow-0"><i className='gg-unavailable' style={{fontSize: '20px' }}></i></button> 
         <div className="w-3"></div>
-        <button className="bg-[#4C6EF5] rounded-[8px] text-2xl flex flex-none order-0 flex-grow-0" style={{width:20, height:20}}></button>
+        <button className="bg-[#4C6EF5] rounded-[8px] text-2xl flex flex-none order-0 flex-grow-0" style={{width:20, height:20 }}>
+         
+        </button>
         <div className="w-3"></div>
         <button className="bg-[#228BE6] rounded-[8px] text-2xl flex flex-none order-0 flex-grow-0" style={{width:20, height:20}}></button>
         <div className="w-3"></div>
