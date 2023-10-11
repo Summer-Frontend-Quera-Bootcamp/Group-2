@@ -1,6 +1,6 @@
 import "./App.css";
-import { LoginRegister } from "./components/LoginRegister";
 import Router from "./Router";
+import LoginRegister from "./components/LoginRegister"
 
 function App() {
   return (
