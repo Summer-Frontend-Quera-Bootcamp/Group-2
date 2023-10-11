@@ -8,7 +8,7 @@ return(
        <div className="logo"><h2 className="font-bold">کوئرا تسک منجیر</h2></div> 
         <div className="loginMenu">
             <ul>
-            <li className="inline"> <Link to="register" title="ثبت نام نکرده ای؟">ثبت نام نکرده ای؟</Link></li>
+            <li className="inline"> <Link to="/register" title="ثبت نام نکرده ای؟">ثبت نام نکرده ای؟</Link></li>
             <li className="inline "><Link className="btn_succ" to="/login" title="ثبت نام">ثبت نام</Link></li>           
             </ul>
         </div> 
