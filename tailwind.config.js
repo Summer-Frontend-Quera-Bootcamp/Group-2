@@ -4,7 +4,7 @@ export default {
   theme: {
     colors: {
       "gray-light": "#F1F3F5",
-      gray: "#868E96",
+      "gray": "#868E96",
       "gray-dark": "#343A40",
       "red-secondary": "#FFE3E3",
       "red-primary": "#FA5252",
@@ -25,13 +25,14 @@ export default {
       "brand-secondary": "#C2F7FA",
       "brand-primary": "#208D8E",
       "green-secondary": "#D3F9D8",
-      "green-primary": "#40C057",
+      "green-primary": "#208D8E",
       "lime-secondary": "#E9FAC8",
       "lime-primary": "#82C91E",
       "yellow-secondary": "#FFF3BF",
       "yellow-primary": "#FAB005",
       "orange-secondary": "#FFE8CC",
       "orange-primary": "#FD7E14",
+      "white":"color:#fff"
     },
     extend: {
       fontFamily: {
@@ -39,5 +40,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 };
