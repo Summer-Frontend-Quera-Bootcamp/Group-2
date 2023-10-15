@@ -1,5 +1,9 @@
+import React from 'react';
 import { Helmet } from 'react-helmet';
-function New_work_info({closeModal}) {
+interface Props {
+  closeModal: (value: boolean) => void;
+}
+function New_work_info({ closeModal }: Props) {
     return (
     <>
           <Helmet>

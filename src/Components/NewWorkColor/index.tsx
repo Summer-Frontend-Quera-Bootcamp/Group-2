@@ -1,7 +1,11 @@
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useState } from 'react';
 import New_work_info from '../NewWorkInfo';
-function New_work_color({closeModal}) {
+interface Props {
+  closeModal: (value: boolean) => void;
+}
+function New_work_color({ closeModal }: Props){
   const [openModal , setOpenModal] = useState(false);
   // const [view, setView] = useState('list');
 

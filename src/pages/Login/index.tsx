@@ -1,3 +1,4 @@
+import React from 'react';
 function Login() {
   return (
     <>
@@ -9,7 +10,7 @@ justifyContent: "space-between",
 alignItems: "start",
 marginLeft:"100px"}}>
   
-    <p style={{marginRight:"80px",background: "-webkit-linear-gradient(#118C80, #4AB7D8)", "-webkit-background-clip": "text", "-webkit-text-fill-color": "transparent", fontSize:"32px" , fontWeight:"800"}}> کوعرا تسک منیجر</p>
+    <p style={{marginRight:"80px",background: "-webkit-linear-gradient(#118C80, #4AB7D8)",   WebkitBackgroundClip: "text",  WebkitTextFillColor: "transparent", fontSize:"32px" , fontWeight:"800"}}> کوعرا تسک منیجر</p>
     <div className="w-1"></div>
     <div style={{display:"flex"}}>
     <button className="text-white bg-brand-primary border border-none rounded-lg font-yekan" style={{ width: '95px', height: '30px', color:'#fff', borderRadius:"6px"}}>ثبت نام</button><div className="w-2"></div><p>ثبت نام نکرده ای؟</p>
