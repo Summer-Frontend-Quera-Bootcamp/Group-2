@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Colse({
+export default function Close({
   size = 18, // or any default size of your choice  
 }) {
   return (
