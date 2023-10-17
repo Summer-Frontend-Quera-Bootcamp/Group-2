@@ -1,0 +1,99 @@
+.container {
+    width: 1352px;
+    height: 596px;
+    border-radius: 20px;
+    background: var(--White, #FFF);
+}
+
+.btnBox {
+    display: flex;
+    height: 57px;
+    padding: 0px var(--S, 16px);
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.openBtnBox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--S, 16px);
+}
+
+.openBtn {
+    display: flex;
+    width: 111px;
+    padding: 4.5px 0px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: #F84747;
+    color: #FFF;
+    font-size: 12px;
+    text-align: right;
+}
+
+.addMemberBox{
+    display: flex;
+    width: 61px;
+    align-items: center;
+    gap: -8px;
+}
+
+.addedMemberImg {
+    display: flex;
+    padding: 9px var(--XS, 8px) 7px var(--XS, 8px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    /* width: auto;
+    height: auto; */
+}
+
+.addMemberImg {
+    display: flex;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    padding: 4.25px;
+    justify-content: center;
+    align-items: center;
+    gap: 10.625px;
+    flex-shrink: 0;
+    border-radius: 106.25px;
+    border: 1.063px dashed #C1C1C1;
+    z-index: 0;
+    margin-right: 39px !important;
+}
+
+.flagImg {
+    display: flex;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    padding: 4.25px;
+    justify-content: center;
+    align-items: center;
+    gap: 10.625px;
+    flex-shrink: 0;
+    border-radius: 94.444px;
+    border: 0.944px dashed #FB0606;
+    z-index: 0;
+    margin-right: 39px !important;
+}
+
+.shareBtn {
+    display: flex;
+    height: 57px;
+    padding: 0px var(--S, 16px);
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.shareImg {
+    width: var(--M, 24px);
+    height: var(--M, 24px);
+    flex-shrink: 0;
+}

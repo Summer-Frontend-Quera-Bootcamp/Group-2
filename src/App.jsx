@@ -1,12 +1,12 @@
 import "./App.css";
-// import { LoginRegister } from "./components/LoginRegister";
-import Tags from "./components/NewTaskCompSmallComponents/Tags";
+
+import TaskInformation from "./components/TaskInformation";
 import Router from "./Router";
 
 function App() {
     return (
         <>
-            <Tags />
+            <TaskInformation />
 
             <Router />
         </>
