@@ -5,7 +5,7 @@
     background: var(--White, #FFF);
 }
 
-.btnBox {
+.btnContainer {
     display: flex;
     height: 57px;
     padding: 0px var(--S, 16px);
@@ -96,4 +96,114 @@
     width: var(--M, 24px);
     height: var(--M, 24px);
     flex-shrink: 0;
+}
+
+.descriptionContainer {
+    display: flex;
+    padding: 0px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--M, 24px);
+    align-self: stretch;
+}
+
+.labelImg {
+    display: flex;
+    width: 34px;
+    height: 34px;
+    padding: 4.533px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 94.444px;
+    border: 0.944px dashed #C1C1C1;
+}
+
+.descriptionBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--XS, 8px);
+    align-self: stretch;
+}
+
+.tagImg {
+    display: flex;
+    width: 34px;
+    height: 34px;
+    padding: 4.533px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 94.444px;
+    border: 0.944px dashed #C1C1C1;
+}
+
+.taskTitle {
+    color: var(--Black, #1E1E1E);
+    text-align: right;
+    
+    /* heading/Small */
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 32px; /* 133.333% */
+    text-transform: capitalize;
+}
+
+.taskDescriptionBox {
+    display: flex;
+    padding: 12px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 12px;
+    border: 1px solid #C1C1C1;
+}
+
+.taskDesc {
+    flex: 1 0 0;
+    color: var(--Black, #1E1E1E);
+    text-align: right;
+    
+    /* Body/Medium */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.rightContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--M, 24px);
+    flex: 1 0 0;
+}
+
+.attachImg {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.attachmentBox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px;
+}
+
+.attachmentTitle {
+    color: var(--brand-primary, #208D8E);
+    text-align: right;
+    
+    /* Body/Extra Small */
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
 }
