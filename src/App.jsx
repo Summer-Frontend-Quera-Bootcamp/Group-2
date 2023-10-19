@@ -1,13 +1,19 @@
 import "./App.css";
 import Router from "./Router";
-import MenuSideBar from './pages/MenuSidebar';
+import MenuSideBar from "./Components/MenuSidebar";
 function App() {
   return (
     <>
-    <MenuSideBar/>
+    <MenuSideBar>
+      <sidebar icon={<}  />
+    </MenuSideBar>
       <Router />
     </>
   );
 }
 
 export default App;
+
+
+
+
