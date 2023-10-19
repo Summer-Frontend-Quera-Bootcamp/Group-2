@@ -1,14 +1,23 @@
-import "./App.css";
+
+// import { StrictMode } from "react";
+// import { BrowserRouter } from "react-router-dom";
+
 import Router from "./Router";
-import LoginRegister from "./components/LoginRegister"
+// import Login from "./pages/Login"
+import Boardview from "./pages/Boardview"
 
 function App() {
   return (
     <>
-    <LoginRegister/>
-   
-
+   {/* <Login/> */}
+<Boardview/>
       <Router />
+      {/* <StrictMode>
+        <BrowserRouter>
+          <App />
+          <Router />
+        </BrowserRouter>
+      </StrictMode> */}
     </>
   );
 }

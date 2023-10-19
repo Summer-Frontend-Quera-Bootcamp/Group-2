@@ -8,6 +8,7 @@ interface IInputProps {
   InputType:string;
   InputValue?:any;
   InputWidth?:string;
+  onChange: (value: string, inputName: string) => void;
 };
  type inputProps ={
   [x in string] :string;
@@ -18,21 +19,31 @@ interface IInputProps {
     LabelFor,
     InputType,InputValue,
     InputWidth= "w-full"}):JSX.Element  =>{
-      const [form,setForm]= useState<inputProps>({  });
+      const [inputValue, setInputValue] = useState(InputValue || '');
+      const [form,setForm]= useState<inputProps>({  });  
+
       function HandelChange(e: React.ChangeEvent<HTMLInputElement>) {
-        setForm({...form,[e.target.name] : e.target.value});
-        console.log(form)   
-        //this.setAttribute("value",e.target.value)    
+        const newValue = e.target.value;
+        setInputValue(newValue);
+        setForm({ [e.target.name]: newValue });
       }
       
+      console.log(form) 
     return(
         <div className="relative mb-6" data-te-input-wrapper-init>
         <label
             htmlFor={LabelFor}
             className={`mt-1 block ${InputWidth}`}>{LabelName}</label>
-          <input
-            type={InputType} name={InputName} onChange={HandelChange} 
-            className={`peer block min-h-[auto] ${InputWidth} rounded border-slate-800 bg-transparent px-3 py-[0.32rem]`} id={LabelFor} />           
+     
+        <input
+          type={InputType}
+          name={InputName}
+          onChange={HandelChange}
+          value={inputValue.inputName}
+          className={`peer block min-h-[auto] ${InputWidth} rounded border-slate-800 bg-transparent px-3 py-[0.32rem]`}
+          id={LabelFor}
+        />
+
         </div>
     )
   }
