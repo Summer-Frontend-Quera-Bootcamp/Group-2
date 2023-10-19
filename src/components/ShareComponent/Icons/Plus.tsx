@@ -9,7 +9,7 @@ export default function Plus({
     width={size} // added size here
     height={size} // added size here
     viewBox="0 0 24 24" fill="none">
-<path d="M6 12H18M12 6V18" stroke={color} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 12H18M12 6V18" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
   )
 }

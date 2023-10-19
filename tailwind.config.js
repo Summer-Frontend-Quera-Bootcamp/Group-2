@@ -13,7 +13,7 @@ export default {
       "grape-secondary": "#F3D9FA",
       "grape-primary": "#BE4BDB",
       "violet-secondary": "#E5DBFF",
-      "violet-primary": "#E5DBFF",
+      "violet-primary": "#6e42e2",
       "indigo-secondary": "#DBE4FF",
       "indigo-primary": "#4C6EF5",
       "blue-secondary": "#D0EBFF",

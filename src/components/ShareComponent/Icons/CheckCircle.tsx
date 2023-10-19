@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function CheckCircle({
   size = 18, // or any default size of your choice  
-  color= "#000"
+  color=  "#000" 
 }) {
   return (
     <svg 

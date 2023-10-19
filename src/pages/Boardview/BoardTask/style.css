@@ -5,3 +5,15 @@
     padding: 16px;
     
 }
+.AccUsers span {
+    background: #FFF3BF;
+    font-size: 12px;
+    border-radius: 50%;
+    line-height: 12px;
+    padding: 6px;
+    padding-top: 11px;
+    padding-left: 8px;
+    color: #FAB005;
+    text-align: center;
+    letter-spacing: 2px;
+}

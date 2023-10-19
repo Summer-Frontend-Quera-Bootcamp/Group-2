@@ -1,47 +1,78 @@
 
-interface ITitleBordProps {
-    LabelName?:string;
-    TaskNumber?:number;
-    onClick?: (any) => void; 
+interface IBordTaskProps {
+    PicProject?:string,
+    ProjectName?:string;
+    taskDes?:string;
+    colorFlag?:string; 
+    colorTag?:string; 
+    endDay?:string;
+    startday?:string,
+    AbbUserName?:string,
+    tag?:string
+    children: React.ReactNode
  }
- import React from "react";
+ import React, { Children } from "react";
 import DotsHorizontal from "../../../components/ShareComponent/Icons/DotsHorizontal";
 import Flag from "../../../components/ShareComponent/Icons/Flag";
-import ChekList from "../../../components/ShareComponent/Icons/ChekList";
 import CheckCircle from "../../../components/ShareComponent/Icons/CheckCircle";
+import CheckSquare from "../../../components/ShareComponent/Icons/CheckSquare";
+import AlignRight from "../../../components/ShareComponent/Icons/AlignRight";
+
 import "./style.css";
-import Comment from "../../../components/ShareComponent/Icons/Comment";
 
-
-  const BoardTask:React.FC<ITitleBordProps> = ({LabelName,TaskNumber,onClick}):JSX.Element  =>{
+  const BoardTask:React.FC<IBordTaskProps> = ({
+    PicProject,
+    ProjectName,
+    AbbUserName,
+    taskDes,
+    colorFlag,
+    colorTag,
+    endDay,
+    startday,tag,
+    children
+}):JSX.Element  =>{
+    const ShowImag = () => (
+        <div className="w-fit" >
+            <img src={PicProject} title={ProjectName} className="rounded"/>  
+        </div>
+      )
     return(
         <>
-      <div className="BoardTask my-2">
-         <div className="">
-         <div className="grid grid-cols-2 gap-2 flex justify-between items-baseline">
-         <Comment/>
-         <div><h6>ProjectName</h6></div>
+      <div className="BoardTask my-2">      
+       { PicProject ? <ShowImag /> : null } {/*if project has image => show this*/}
 
-         </div>
-           
-            <p>askName</p>
-            <div className="flex row justify-center grid grid-cols-2 gap-2">
-                <div className="priority"><Flag ></Flag></div>
-                <div className="startDay"></div>
-                <div className="endDay "> <ChekList/> </div>
+     
+         <div className="py-2 flex justify-between items-baseline">               
+            <div><h6 className="text-[#534D60] text-sm">{ProjectName}</h6></div>
+            <div className="AccUsers flex justify-end">
+                <span>{AbbUserName}</span>
             </div>
-            <div className=" flex justify-center" id="Tags">
-            <span className={`inline-block whitespace-nowrap rounded-full  px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none bg-#fab005-600/[.06] text-#fab005-600`}>
-             Primary
-            </span>
+        </div> 
 
-{/* ${InputWidth} */}
+        <div className="py-2 flex items-center">
+            <p className="text-sm me-1">{taskDes}</p>
+            <AlignRight size= {12} color="#BDC0C6"/>
+        </div>
+
+        <div className="flex row justify-start  py-2">
+            <div className="priority flex items-center">
+                <Flag color={colorFlag}></Flag>
+                <p className="startDay text-xs">{startday}</p>
+            </div>               
+            <div className="endDay flex items-center text-xs text-[#BDC0C6] mr-1">
+                <CheckSquare color="#BDC0C6"/> <p>{endDay}</p>
             </div>
-            <footer className="Footer border border-solid border-slate-500 flex justify-between">
-                <CheckCircle/>
-                <DotsHorizontal/>
-            </footer>
-         </div>
+        </div>
+
+        <div className=" flex justify-start TagList py-2">
+            {children}
+        </div>
+
+        <footer className="Footer mt-2 pt-1 border-t border-solid border-[#d8d8d8] flex justify-between">
+            <CheckCircle/>
+            <DotsHorizontal/>
+        </footer>
+       
         </div>
         </>
     )

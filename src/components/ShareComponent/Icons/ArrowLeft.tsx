@@ -9,7 +9,7 @@ export default function ArrowLeft({
     width={size} // added size here
     height={size} // added size here
     viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M14 8.5L10 12.5L14 16.5" stroke={color} stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14 8.5L10 12.5L14 16.5" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
     
     
