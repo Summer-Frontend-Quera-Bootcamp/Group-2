@@ -146,7 +146,7 @@ const TagMenu: React.FC<TagComponentProps> = ({ tagNameAssign }) => {
             </div>
           </div>
         </Modal>
-        <Modal isOpen={isTagNameEditOpen} overlayClassName='overlay' className='modal flex flex-col absolute items-center mt-[140px] mr-[475px]'>
+        <Modal isOpen={isTagNameEditOpen && isTagOptionOpen} overlayClassName='overlay' className='modal flex flex-col absolute items-center mt-[140px] mr-[475px]'>
           <div className="flex p-2 flex-col items-start gap-4 rounded-lg bg-[#FFF] shadow-[0px_4px_16px_0px_rgba(0,0,0,0.16)]">
           <input
                 type="text"
@@ -161,7 +161,7 @@ const TagMenu: React.FC<TagComponentProps> = ({ tagNameAssign }) => {
             </div>
           </div>
         </Modal>
-        <Modal isOpen={isTagColorEditOpen} overlayClassName='overlay' className='modal flex flex-col absolute items-center mt-[140px] mr-[475px]'>
+        <Modal isOpen={isTagColorEditOpen && isTagOptionOpen} overlayClassName='overlay' className='modal flex flex-col absolute items-center mt-[140px] mr-[475px]'>
           <div className='flex p-2 flex-col justify-center items-start gap-[11px] rounded-lg bg-[#FFF] shadow-[0px_4px_8px_0px_rgba(0,0,0,0.18)]'>
               <div className="flex w-[132px] justify-start items-center gap-2 flex-wrap">
                 <button onClick={()=>{handleTagColorEdit('brand')}}>

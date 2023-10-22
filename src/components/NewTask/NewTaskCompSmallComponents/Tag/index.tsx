@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import DotsHorizontal from "../../../ShareComponent/Icons/DotsHorizontal";
-import TagOptions from "../TagOptions";
 
 interface Tag {
   id: number;

@@ -21,7 +21,7 @@ export default {
       "cyan-secondary": "#C5F6FA",
       "cyan-primary": "#15AABF",
       "teal-secondary": "#C3FAE8",
-      "teal=primary": "#12B886",
+      "teal-primary": "#12B886",
       "brand-secondary": "#C2F7FA",
       "brand-primary": "#208D8E",
       "green-secondary": "#D3F9D8",
