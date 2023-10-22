@@ -1,0 +1,76 @@
+.container {
+    height: 209px;
+    flex-shrink: 0;
+    align-self: stretch;
+    border-radius: 12px 12px 0px 0px;
+    border: 1px solid #F4F4F4;
+    background: #FFF;
+    
+    /* Comment section Shadow */
+    box-shadow: 0px -7px 18px -10px rgba(0, 0, 0, 0.25);
+}
+
+.btnBox {
+    display: flex;
+    width: 659px;
+    height: 60px;
+    padding: 0px 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.submitBtnLayout {
+    display: flex;
+    padding: 6px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.submitBtn {
+    border-radius: 6px;
+    width: 60px !important;
+    padding: 5px !important; 
+    background: var(--brand-primary, #208D8E);
+    color: #FFF;
+    text-align: right;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.optionBtnLayout {
+    display: flex;
+    width: 659px;
+    height: 60px;
+    padding: 0px 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.taskDescriptionBox {
+    display: flex;
+    padding: 12px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 12px;
+}
+
+.taskDesc {
+    flex: 1 0 0;
+    color: var(--Black, #1E1E1E);
+    text-align: right;
+    
+    /* Body/Medium */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+}

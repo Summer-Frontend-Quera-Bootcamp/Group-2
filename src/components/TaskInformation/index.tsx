@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import Comment from "./Comment";
 import "./style.css";
 const TaskInformation: React.FC = (): JSX.Element => {
+    const [isModalVisible, setModalVisible] = useState(false);
+
+    const handleCommentLabelClick = () => {
+        setModalVisible(true);
+    };
+    
     return (
         <div className="container">
             <div className="rightContainer">
@@ -53,6 +60,28 @@ const TaskInformation: React.FC = (): JSX.Element => {
                         <span className="attachmentTitle">اضافه کردن پیوست</span>
                     </div>
                 </div>
+            </div>
+            <div className="leftContainer">
+                <div className="infoContainer">
+                    <div className="infoBox">
+                        <div className="info">
+                            <div className="dateInfo">
+                                <span className="infoLabel">ساخته شده در</span>
+                                <span className="infoTitle">۱ اردیبهشت ۱۴۰۲</span>
+                            </div>
+                            <div className="deadLineInfo">
+                                <span className="infoLabel">ددلاین</span>
+                                <span className="infoTitle">پس فردا</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="commentContainer">
+                    <span className="yourCommentLabel" onClick={handleCommentLabelClick}>کامنت شما</span>
+                    <img src="../../assets/img/interface-essential-group-message.png" alt="commentIcon"></img>
+                </div>
+                {/* Render the CommentModal component */}
+                {isModalVisible && <Comment onClose={() => setModalVisible(false)} />}
             </div>
         </div>
     );

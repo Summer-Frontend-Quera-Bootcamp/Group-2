@@ -1,8 +1,10 @@
 .container {
-    width: 1352px;
-    height: 596px;
-    border-radius: 20px;
-    background: var(--White, #FFF);
+    display: flex;
+    width: 1316px;
+    height: 506px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-shrink: 0;
 }
 
 .btnContainer {
@@ -204,6 +206,95 @@
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.leftContainer {
+    display: flex;
+    width: 659px;
+    height: 506px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--M, 24px);
+    align-self: stretch;
+}
+
+.infoBox {
+    display: flex;
+    padding: 0px 20px 0px 36px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 214px;
+    align-self: stretch;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--M, 24px);
+}
+
+.dateInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--XS, 8px);
+}
+
+.deadLineInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--XS, 8px);
+}
+
+.infoLabel {
+    color: #BBB;
+    text-align: right;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.infoTitle {
+    color: var(--Black, #1E1E1E);
+    text-align: right;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.commentContainer {
+    display: flex;
+    height: 67px;
+    padding: 13px 16px 30px 36px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 509px;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+.yourCommentLabel{
+    color: #AEAEAE;
+    text-align: right;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
     line-height: normal;
     text-transform: capitalize;
 }
