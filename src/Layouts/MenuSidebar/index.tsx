@@ -20,7 +20,20 @@ export default function MenuSideBar({children}) {
           </p>
         </div>
 
+        <li style={{display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-start",
+        gap: "var(--S, 16px)",
+        alignSelf: "stretch",
+        }}>
+
+
+
+
+        </li>
+
         <ul className="flex-1 px-3">{children}</ul>
+       
 
         <div style={{display: "flex",
         width: "276px",
@@ -77,17 +90,42 @@ export default function MenuSideBar({children}) {
         </div>
 
         </div>
+      
       </nav>
     </aside>
   );
 }
 
 
-export function sidebar({colorBox , text , active , alert}){
+export function SidebarItem({colorBox , text}){
   return(
     <li>
-      {colorBox}
-      <span>{text}</span>
+      <div style={{display: "flex",
+    padding: "4px",
+    justifyContent: "flex-end",
+    alignItems: "center",
+    gap: "8px",
+    alignSelf: "stretch",
+    }}>
+       <span style={{fontFamily: "IRANYekan",
+       fontSize: "16px",
+       fontStyle: "normal",
+       fontWeight: "500",
+       textTransform: "capitalize",
+       }}>{text}</span>
+      <button style={{
+      background: colorBox,
+      borderRadius: "4px",
+      fontSize: "2xl",
+      display: "flex",
+      flex: "none",
+      order: "0",
+      flexGrow: "0",
+      width: "20px",
+      height: "20px"
+    }}>
+      </button>
+      </div>
       </li>
   )
 }
