@@ -9,13 +9,13 @@ function New_work_space({ closeModal }: Props) {
   const [openModal , setOpenModal] = useState(false);
   return (<>
     <div className='w-[500] h-[286]'>
-      <Helmet>
+      {/* <Helmet>
         <link
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
           rel="stylesheet"
         />
         <link href='https://unpkg.com/css.gg@2.0.0/icons/css/unavailable.css' rel='stylesheet'></link>
-      </Helmet>
+      </Helmet> */}
     {/* PAGE1 */}
    <div >
     <div style={{display: "flex",flexDirection:"column", alignItems:"center" , justifyContent:"center" ,position:"fixed"  , boxShadow:"rgba(0,0,0,0.35) 0px 5px 15px"}}>

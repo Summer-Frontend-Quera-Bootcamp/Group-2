@@ -14,13 +14,13 @@ function New_work_color({ closeModal }: Props){
   // };
     return (
     <>
-        <Helmet>
+        {/* <Helmet>
         <link
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
           rel="stylesheet"
         />
         <link href='https://unpkg.com/css.gg@2.0.0/icons/css/unavailable.css' rel='stylesheet'></link>
-      </Helmet>
+      </Helmet> */}
 
     {/*Page2*/}
      <div style={{height: "510" , width:"286" , position:"fixed", display:"flex" , top:0 , backgroundColor:"white"}}></div>
