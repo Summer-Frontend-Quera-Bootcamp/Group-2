@@ -61,7 +61,8 @@ const TaskInformation: React.FC = (): JSX.Element => {
                     </div>
                 </div>
             </div>
-            <div className="leftContainer">
+            {/*onClick={() => { if(isModalVisible) { setModalVisible(false) }}}*/}
+            <div className="leftContainer" >
                 <div className="infoContainer">
                     <div className="infoBox">
                         <div className="info">
@@ -76,10 +77,10 @@ const TaskInformation: React.FC = (): JSX.Element => {
                         </div>
                     </div>
                 </div>
-                <div className="commentContainer">
+                {!isModalVisible && <div className="commentContainer">
                     <span className="yourCommentLabel" onClick={handleCommentLabelClick}>کامنت شما</span>
                     <img src="../../assets/img/interface-essential-group-message.png" alt="commentIcon"></img>
-                </div>
+                </div>}
                 {/* Render the CommentModal component */}
                 {isModalVisible && <Comment onClose={() => setModalVisible(false)} />}
             </div>

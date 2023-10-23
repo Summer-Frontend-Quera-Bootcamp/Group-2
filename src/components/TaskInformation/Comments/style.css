@@ -1,0 +1,64 @@
+.container130 {
+    display: flex;
+    padding: 0px var(--S, 16px);
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: var(--XS, 8px);
+    align-self: stretch;
+}
+
+.authorPicture {
+    display: flex;
+    padding: 9px var(--XS, 8px) 7px var(--XS, 8px);
+    justify-content: flex-end;
+    align-items: flex-start;
+    border-radius: 100px;
+}
+
+.CommentBox130 {
+    display: flex;
+    padding: var(--S, 16px);
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--XS, 8px);
+    flex: 1 0 0;
+}
+
+.authorName {
+    display: flex;
+    width: 497px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name130 {
+    color: var(--brand-primary, #208D8E);
+    text-align: right;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.date130 {
+    color: #AAA;
+    text-align: right;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.commentDesc130 {
+    width: 483px;
+    height: 39px;
+    color: var(--Black, #1E1E1E);
+    text-align: right;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}

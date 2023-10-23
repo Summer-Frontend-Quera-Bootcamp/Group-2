@@ -7,11 +7,11 @@ interface CommentProps {
 
 const Comment: React.FC<CommentProps> = ({ onClose }): JSX.Element => {
     return (
-        <div className="container">
+        <div className="container120">
             <div className="taskDescriptionBox">
-                <textarea rows={5} id="td" className="taskDesc" placeholder="کامنت"></textarea>
+                <textarea rows={5} id="td" className="taskDesc120" placeholder="کامنت"></textarea>
             </div>
-            <div className="btnBox">
+            <div className="btnBox120">
                 <div className="optionBtnLayout">
                     <img src="../../assets/img/emails-group-1.png" alt="email"></img>
                     <img src="../../assets/img/interface-essential-group-link.png" alt="link"></img>
