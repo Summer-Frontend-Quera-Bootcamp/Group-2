@@ -4,9 +4,14 @@ import LoginForm from "./LoginForm";
 
 const Login:React.FC = () :JSX.Element =>{
 return(
-   <LayoutLogin>
-       <LoginForm TitleBox="به کوئرا تسک منیجر خوش برگشتی :)"/>
-   </LayoutLogin>
+   
+    <div className="flex justify-center">
+    <div className="lg:w-[50%] md:w-[80%] card  md:mt-50 mt-10">
+    <LoginForm TitleBox="به کوئرا تسک منیجر خوش برگشتی :)"/>
+    
+    </div>
+ </div>
+   
   
 )
 }

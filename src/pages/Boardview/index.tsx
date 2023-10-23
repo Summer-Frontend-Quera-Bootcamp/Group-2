@@ -1,9 +1,11 @@
 
 
 import TitleBord from "./TitleBord";
-import React from 'react';
+import React, { useState ,useEffect } from 'react';
 import BoardTask from "./BoardTask";
 import TagTask from "./BoardTask/TagTask";
+import { API_URLS } from "../../Constants/api.urls";
+import { AXIOS } from "../../config/axios.config";
 
 type FormProps = {
     BoardName: string;
@@ -14,12 +16,24 @@ type FormProps = {
   }; 
   const Boardview:React.FC<FormProps> = ({
     BoardName, BoardCount, BoardColor,children,listBoards}):JSX.Element  =>{  
-return(
+    const [state,setState] = useState()
+     
+    const fetchTask = async () =>{
+            const response = await AXIOS.get(API_URLS.GetTasks)    
+            setState (response.data)
+          }
+
+      useEffect(() =>{
+        fetchTask
+      },[])
+
+      return(
     <>
     <div className="container"> 
         <div className="flex justify-center" id="listBoards">
      
             <div className="w-[250px] m-2">
+              
             <TitleBord LabelName="In progress" TaskNumber={5} ColorTitle='#ff0000'/ >
             
              <BoardTask  ProjectName="پروژه اول" AbbUserName="ET" 
@@ -64,3 +78,4 @@ return(
 }
 
 export default Boardview;
+

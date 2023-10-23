@@ -54,7 +54,7 @@ type FormProps = {
     
       {/* Forgot password link */}
       <div className="mb-6 flex items-center justify-between">            
-         <Link to="" title="فراموشی رمز عبور" className="text-green-primary">رمزعبور را فراموش کرده ای ؟</Link>
+         <Link to="/Forgetpassword" title="فراموشی رمز عبور" className="text-green-primary">رمزعبور را فراموش کرده ای ؟</Link>
       </div>
 
           {/* Login button  */}

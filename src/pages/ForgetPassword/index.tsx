@@ -27,7 +27,11 @@ const Forgetpassword:React.FC = () :JSX.Element =>{
     console.log(formValues);
 return(
  <>
-   <LayoutLogin> 
+   
+   <div className="flex justify-center">
+    <div className="lg:w-[50%] md:w-[80%] card  md:mt-50 mt-10">
+    
+    
       <h1 className="font-bold text-center">بازیابی رمز عبور</h1>  
        
       <form>
@@ -52,7 +56,9 @@ return(
              <Button  DspWidth="w-full" BtnValue="تغییر رمز عبور" BtnColor="bg-green-primary"  onClick={HandelSubmitClick} />
            </div> */}
         </form>
-   </LayoutLogin>
+   
+        </div>
+ </div>
     </>
   
 )
