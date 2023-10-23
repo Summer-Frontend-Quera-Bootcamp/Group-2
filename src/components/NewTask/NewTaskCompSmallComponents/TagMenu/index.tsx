@@ -17,15 +17,15 @@ interface TagComponentProps {
   tagNameAssign: (data: string, color: string) => void;
 }
 const TagMenu: React.FC<TagComponentProps> = ({ tagNameAssign }) => {
-//   const possible =[
-// "bg-red-secondary","text-red-primary","bg-pink-secondary","text-pink-primary",
-// "bg-grape-secondary","text-grape-primary","bg-violet-secondary","text-violet-primary",
-// "bg-indigo-secondary","text-indigo-primary","bg-blue-secondary","text-blue-primary",
-// "bg-cyan-secondary","text-cyan-primary","bg-teal-secondary","text-teal=primary",
-// "bg-brand-secondary","text-brand-primary","bg-green-secondary","text-green-primary",
-// "bg-lime-secondary","text-lime-primary","bg-yellow-secondary","text-yellow-primary",
-// "bg-orange-secondary","text-orange-primary"
-//   ]
+  const possible =[
+"bg-red-secondary","text-red-primary","bg-pink-secondary","text-pink-primary",
+"bg-grape-secondary","text-grape-primary","bg-violet-secondary","text-violet-primary",
+"bg-indigo-secondary","text-indigo-primary","bg-blue-secondary","text-blue-primary",
+"bg-cyan-secondary","text-cyan-primary","bg-teal-secondary","text-teal-primary",
+"bg-brand-secondary","text-brand-primary","bg-green-secondary","text-green-primary",
+"bg-lime-secondary","text-lime-primary","bg-yellow-secondary","text-yellow-primary",
+"bg-orange-secondary","text-orange-primary"
+  ]
   const [tags, setTags] = useState<Tag[]>([
     { id: 1, name: 'درس', color: 'bg-brand-secondary', textColor: 'text-brand-primary' },
     { id: 2, name: 'کار', color: 'bg-brand-secondary', textColor: 'text-brand-primary'},
@@ -38,7 +38,9 @@ const TagMenu: React.FC<TagComponentProps> = ({ tagNameAssign }) => {
   const [isTagNameEditOpen,setIsTagNameEditOpen] = useState(false);
   const [tagNameEdit,setTagNameEdit] = useState('');
   const [isTagColorEditOpen,setIsTagColorEditOpen] = useState(false);
+  const [isNewTagOpen,setIsNewTagOpen] = useState(false);
   const [tagColorEdit,SetTagColorEdit] = useState('');
+  const [lastTagID,setLastTagID] = useState(3);
 
 
   const handleTagSelect = (data: string, color: string) => {
@@ -78,10 +80,17 @@ const TagMenu: React.FC<TagComponentProps> = ({ tagNameAssign }) => {
   const handleTagColorEdit =(editColor:string)=>{
     if(isTagColorEditOpen){
       const updatedTags = tags.map((tag)=>tag.id===tagEditId ? {...tag,color:('bg-'+editColor+'-secondary'),textColor:('text-'+editColor+'-primary')}: tag);
-      console.log(updatedTags);
       setTags(updatedTags);
       setIsTagColorEditOpen(!isTagColorEditOpen);
       setIsTagOptionOpen(!isTagOptionOpen);
+    }
+  }
+  const handleNewTag =(editColor:string)=>{
+    if(isNewTagOpen){
+      tags.push({ id: lastTagID+1, name: tagNameEdit, color: ('bg-'+editColor+'-secondary'), textColor: ('text-'+editColor+'-primary') })
+      console.log(tags);
+      setIsNewTagOpen(!isNewTagOpen);
+      setTagNameEdit('');
     }
   }
   return (
@@ -94,7 +103,9 @@ const TagMenu: React.FC<TagComponentProps> = ({ tagNameAssign }) => {
       >
         <div className="inline-flex text-[#FFF] p-2 flex-col items-start rounded-lg bg-[#FFF] shadow-[0px_4px_16px_rgba(0,0,0,0.16)] mr-[100px]">
           <div className="flex flex-col items-start gap-2">
-            <button className="flex h-6 px-2 py-[5px] justify-center items-center gap-2 rounded-[35px] bg-[#FFE8CC]">
+            <button className="flex h-6 px-2 py-[5px] justify-center items-center gap-2 rounded-[35px] bg-[#FFE8CC]" onClick={()=>{
+              setIsNewTagOpen(!isNewTagOpen);
+            }}>
               <div className="text-[#FD7E14] text-right font-IRANYekanWeb text-[12px] font-normal uppercase">
                 تگ جدید
               </div>
@@ -157,7 +168,7 @@ const TagMenu: React.FC<TagComponentProps> = ({ tagNameAssign }) => {
                 className="text-[#534D60] text-right font-IRANYekanWeb text-[12px] font-normal uppercase flex h-8 rounded-[4px] border-hidden bg-[#E9E9E9] focus:outline-none focus:border-hidden"
               />
             <div className='text-right font-IRANYekanWeb text-[12px] font-normal uppercase'>
-                برای ساختن تگ جدید اینتر بزنید
+                برای ثبت تغییرات اینتر بزنید
             </div>
           </div>
         </Modal>
@@ -204,6 +215,61 @@ const TagMenu: React.FC<TagComponentProps> = ({ tagNameAssign }) => {
                 <TagColor size={20} color='#BE4BDB'/>
                 </button>
               </div>
+          </div>
+        </Modal>
+        <Modal isOpen={isNewTagOpen} overlayClassName='overlay' className='modal flex flex-col absolute items-center mt-[30px] mr-[400px]'>
+        <div className="flex p-2 flex-col w-[160px] items-start gap-3 rounded-lg bg-[#FFF] shadow-[0px_4px_16px_0px_rgba(0,0,0,0.16)]">
+          <input
+                type="text"
+                value={tagNameEdit}
+                onChange={handleTagNameEdit}
+                placeholder="نام تگ"
+                className="text-[#534D60] text-right font-IRANYekanWeb text-[12px] font-normal uppercase flex h-8 w-[145px] rounded-[4px] border-hidden bg-[#E9E9E9] focus:outline-none focus:border-hidden"
+              />
+              <div className="flex w-[150px] justify-start items-center gap-2 flex-wrap">
+                <button onClick={()=>{handleNewTag('brand')}}>
+                <TagColor size={20} color='#208D8E'/>
+                </button>
+                <button onClick={()=>{handleNewTag('green')}}>
+                <TagColor size={20} color='#40C057'/>
+                </button>
+                <button onClick={()=>{handleNewTag('lime')}}>
+                <TagColor size={20} color='#82C91E'/>
+                </button>
+                <button onClick={()=>{handleNewTag('yellow')}}>
+                <TagColor size={20} color='#FAB005'/>
+                </button>
+                <button onClick={()=>{handleNewTag('orange')}}>
+                <TagColor size={20} color='#FD7E14'/>
+                </button>
+                <button onClick={()=>{handleNewTag('violet')}}>
+                <TagColor size={20} color='#7950F2'/>
+                </button>
+                <button onClick={()=>{handleNewTag('indigo')}}>
+                <TagColor size={20} color='#4C6EF5'/>
+                </button>
+                <button onClick={()=>{handleNewTag('blue')}}>
+                <TagColor size={20} color='#228BE6'/>
+                </button>
+                <button onClick={()=>{handleNewTag('cyan')}}>
+                <TagColor size={20} color='#15AABF'/>
+                </button>
+                <button onClick={()=>{handleNewTag('teal')}}>
+                <TagColor size={20} color='#12B886'/>
+                </button>
+                <button onClick={()=>{handleNewTag('red')}}>
+                <TagColor size={20} color='#FA5252'/>
+                </button>
+                <button onClick={()=>{handleNewTag('pink')}}>
+                <TagColor size={20} color='#E64980'/>
+                </button>
+                <button onClick={()=>{handleNewTag('grape')}}>
+                <TagColor size={20} color='#BE4BDB'/>
+                </button>
+              </div>
+            <div className='text-right font-IRANYekanWeb text-[12px] font-normal uppercase'>
+                اول اسم تگ جدید را انتخاب سپس برای ثبت، روی رنگ مورد نظر خود کلیک کنید
+            </div>
           </div>
         </Modal>
       </Modal>
