@@ -14,11 +14,22 @@ export default function MenuSideBar({children}) {
               fontSize: "32px",
               fontFamily: "IRANYekan",
               fontWeight: "800",
+              paddingLeft:"30px",
+              textTransform: "capitalize",
             }}
           >
             کوئرا تسک منیجر
           </p>
         </div>
+{/* space between each switch */}
+<div style={{display: "flex",
+      padding: "8px 15px 8px 164px",
+      justifyContent: "flex-end",
+      alignItems: "center",
+      gap: "6px",
+      alignSelf: "stretch",
+      }}>
+      </div>
 
 
         <li style={{display: "flex",
@@ -27,9 +38,6 @@ export default function MenuSideBar({children}) {
         gap: "var(--S, 16px)",
         alignSelf: "stretch",
         }}>
-
-
-
 
         </li>
 
@@ -91,6 +99,16 @@ export default function MenuSideBar({children}) {
         </div>
 
         </div>
+        {/* space between each switch */}
+  <div style={{display: "flex",
+      padding: "8px 15px 8px 164px",
+      justifyContent: "flex-end",
+      alignItems: "center",
+      gap: "6px",
+      alignSelf: "stretch",
+      }}>
+      </div>
+
       
       </nav>
     </aside>
@@ -98,9 +116,19 @@ export default function MenuSideBar({children}) {
 }
 
 
-export function SidebarItem({colorBox , text}){
+export function SidebarItem({colorBox, text}){
   return(
     <li>
+
+      <div style={{display: "flex",
+      padding: "8px 15px 8px 164px",
+      justifyContent: "flex-end",
+      alignItems: "center",
+      gap: "6px",
+      alignSelf: "stretch",
+      }}>
+      </div>
+
       <div style={{display: "flex",
     padding: "4px",
     justifyContent: "flex-end",
