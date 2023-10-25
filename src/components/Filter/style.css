@@ -1,0 +1,72 @@
+.container210 {
+    display: inline-flex;
+    padding: 15px 20.655px 72px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 19px;
+    border-radius: var(--XS, 8px);
+    background: #FFF;
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.20);
+}
+
+.filterTitleLayout {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text210 {
+    color: var(--Black, #1E1E1E);
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 32px; /* 133.333% */
+    text-transform: capitalize;
+}
+
+.FiltersLayout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: var(--M, 24px);
+}
+
+.filterRowInfo {
+    display: flex;
+    align-items: center;
+    gap: var(--XS, 8px);
+}
+
+.textInFilterRowInfo1 {
+    margin: auto 0;
+    color: var(--Black, #1E1E1E);
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.tagPickerLayout {
+    display: flex;
+    width: 182px;
+    padding: 5px var(--XS, 8px) 4px var(--XS, 8px);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+    border: 1px solid #E9EBF0;
+    background: #FFF;
+}
+
+.addNewFilterText {
+    color: var(--brand-primary, #208D8E);
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+}

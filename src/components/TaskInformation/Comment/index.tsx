@@ -1,11 +1,11 @@
 import React from "react";
 import "./style.css";
 
-interface CommentProps {
+interface ICommentProps {
     onClose: () => void;
 }
 
-const Comment: React.FC<CommentProps> = ({ onClose }): JSX.Element => {
+const Comment: React.FC<ICommentProps> = ({ onClose }): JSX.Element => {
     return (
         <div className="container120">
             <div className="taskDescriptionBox">
