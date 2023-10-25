@@ -5,12 +5,11 @@ interface Tag {
   id: number;
   name: string;
   color: string;
-  textColor: string;
   tagSelected: (data: string, color: string) => void;
   tagOption: (id: number)=>void;
 }
 
-const TagComponent: React.FC<Tag> = ({ id, name, color, textColor, tagSelected ,tagOption}) => {
+const TagComponent: React.FC<Tag> = ({ id, name, color, tagSelected ,tagOption}) => {
   const handleTagOptionButton = () => {
     tagOption(id);
   };
@@ -30,12 +29,12 @@ const TagComponent: React.FC<Tag> = ({ id, name, color, textColor, tagSelected ,
     <div className="flex justify-between items-center self-stretch">
       <div
         className={
-          "flex h-6 px-2 py-0 justify-center items-center rounded-[14px] cursor-pointer " +
-          color
+          "flex h-6 px-2 py-0 justify-center items-center rounded-[14px] cursor-pointer bg-" +
+          color + "-secondary"
         }
         onClick={handleTagSelectButton}
       >
-        <div className={"text-right font-IRANYekanWeb text-[12px] font-extrabold uppercase " + textColor}>
+        <div className={"text-right font-IRANYekanWeb text-[12px] font-extrabold uppercase text-" + color + "-primary"}>
           {name}
         </div>
       </div>
