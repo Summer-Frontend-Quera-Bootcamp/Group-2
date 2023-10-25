@@ -1,5 +1,21 @@
 import EmailForm from "./components/EmailForm";
+import React from "react";
 import "./index.css";
+
+interface User {
+  id: Number;
+  username: String;
+  email: String;
+  first_name: String;
+  last_name: String;
+  phone_number: Number;
+  thumbnail: String;
+}
+
+interface ProjectMember {
+  id: Number;
+  user: User[];
+}
 
 const ShareProject: React.FC = () => {
   return (
