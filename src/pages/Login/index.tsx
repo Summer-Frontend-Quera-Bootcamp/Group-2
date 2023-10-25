@@ -1,5 +1,4 @@
 import React from "react"
-import LayoutLogin from "../../components/ShareComponent/LayoutLogin";
 import LoginForm from "./LoginForm";
 
 const Login:React.FC = () :JSX.Element =>{
