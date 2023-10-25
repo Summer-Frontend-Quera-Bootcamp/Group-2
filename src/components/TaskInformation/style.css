@@ -299,3 +299,8 @@
     text-transform: capitalize;
     cursor: pointer;
 }
+
+.insertedCommentContainer {
+    height: 710px;
+    overflow: auto;
+}

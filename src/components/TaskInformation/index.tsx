@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Comment from "./Comment";
+import Comments from "./Comments";
 import "./style.css";
 const TaskInformation: React.FC = (): JSX.Element => {
     const [isModalVisible, setModalVisible] = useState(false);
@@ -76,6 +77,9 @@ const TaskInformation: React.FC = (): JSX.Element => {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="insertedCommentContainer">
+                    <Comments/>
                 </div>
                 {!isModalVisible && <div className="commentContainer">
                     <span className="yourCommentLabel" onClick={handleCommentLabelClick}>کامنت شما</span>
