@@ -1,8 +1,8 @@
-import { useState, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import Permission from "./Permission";
 import PortalPopup from "./PortalPopup";
 
-const EmailForm = () => {
+const EmailForm: React.FC = () => {
   const [isPermissionOpen, setPermissionOpen] = useState(false);
 
   const openPermission = useCallback(() => {
@@ -28,7 +28,7 @@ const EmailForm = () => {
               </div>
               <div className="flex flex-row items-center justify-start gap-[7px] text-[14px] text-[#1e1e1e]">
                 <div className="relative capitalize">من</div>
-                <div className="rounded-[100px] w-[34px] flex flex-row pt-[9px] px-2 pb-[7px] box-border items-center justify-center bg-[url('/public/frame-32@3x.png')] bg-cover bg-no-repeat bg-[top] text-[12px">
+                <div className="rounded-[100px] w-[34px] flex flex-row pt-[9px] px-2 pb-[7px] box-border items-center justify-center bg-[url('/public/frame-32@3x.png')] bg-cover bg-no-repeat bg-[top] text-[12px]">
                   <div className="relative capitalize opacity-[0]">NM</div>
                 </div>
               </div>
@@ -46,7 +46,7 @@ const EmailForm = () => {
               />
               <button className="relative capitalize">دسترسی کامل</button>
             </div>
-            <div className="flex flex-row items-center justify-end text-[14px">
+            <div className="flex flex-row items-center justify-end text-[14px]">
               <div className="flex flex-row items-center justify-start gap-[7px]">
                 <div className="relative capitalize">sararahimi@gmail.com</div>
                 <div className="rounded-[100px] bg-[#f27474] w-[34px] flex flex-row pt-[9px] px-2 pb-[7px] box-border items-center justify-center text-[12px]">

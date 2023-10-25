@@ -1,8 +1,26 @@
-import { useMemo, useCallback, useState, useRef, useEffect } from "react";
-
+import React, {
+  useMemo,
+  useCallback,
+  useState,
+  useRef,
+  useEffect,
+} from "react";
 import { createPortal } from "react-dom";
 
-const PortalPopup = ({
+interface PortalPopupProps {
+  children: React.ReactNode;
+  overlayColor?: string;
+  placement?: string;
+  onOutsideClick?: () => void;
+  zIndex?: number;
+  left?: number;
+  right?: number;
+  top?: number;
+  bottom?: number;
+  relativeLayerRef?: React.RefObject<Element>;
+}
+
+const PortalPopup: React.FC<PortalPopupProps> = ({
   children,
   overlayColor,
   placement = "Centered",
@@ -14,13 +32,18 @@ const PortalPopup = ({
   bottom = 0,
   relativeLayerRef,
 }) => {
-  const relContainerRef = useRef(null);
-  const [relativeStyle, setRelativeStyle] = useState({
-    opacity: 0,
-  });
+  const relContainerRef = (useRef < HTMLElement) | (null > null);
+  const [relativeStyle, setRelativeStyle] =
+    useState <
+    React.CSSProperties >
+    {
+      opacity: 0,
+    };
+
   const popupStyle = useMemo(() => {
-    const style = {};
-    style.zIndex = zIndex;
+    const style: React.CSSProperties = {
+      zIndex,
+    };
 
     if (overlayColor) {
       style.backgroundColor = overlayColor;
@@ -61,7 +84,8 @@ const PortalPopup = ({
   const setPosition = useCallback(() => {
     const relativeItem = relativeLayerRef?.current?.getBoundingClientRect();
     const containerItem = relContainerRef?.current?.getBoundingClientRect();
-    const style = { opacity: 1 };
+    const style: React.CSSProperties = { opacity: 1 };
+
     if (relativeItem && containerItem) {
       const {
         x: relativeX,
@@ -71,6 +95,7 @@ const PortalPopup = ({
       } = relativeItem;
       const { width: containerW, height: containerH } = containerItem;
       style.position = "absolute";
+
       switch (placement) {
         case "Top left":
           style.top = relativeY - containerH - top;
@@ -119,8 +144,12 @@ const PortalPopup = ({
   }, [setPosition]);
 
   const onOverlayClick = useCallback(
-    (e) => {
-      if (onOutsideClick && e.target.classList.contains("portalPopupOverlay")) {
+    (e: React.MouseEvent) => {
+      if (
+        onOutsideClick &&
+        e.target instanceof Element &&
+        e.target.classList.contains("portalPopupOverlay")
+      ) {
         onOutsideClick();
       }
       e.stopPropagation();
@@ -143,7 +172,10 @@ const PortalPopup = ({
   );
 };
 
-export const Portal = ({ children, containerId = "portals" }) => {
+export const Portal: React.FC<{
+  children: React.ReactNode,
+  containerId?: string,
+}> = ({ children, containerId = "portals" }) => {
   let portalsDiv = document.getElementById(containerId);
   if (!portalsDiv) {
     portalsDiv = document.createElement("div");
@@ -153,4 +185,5 @@ export const Portal = ({ children, containerId = "portals" }) => {
 
   return createPortal(children, portalsDiv);
 };
+
 export default PortalPopup;

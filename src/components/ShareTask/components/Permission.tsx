@@ -1,4 +1,6 @@
-const Permission = () => {
+import React from "react";
+
+const Permission: React.FC = () => {
   return (
     <div className="relative rounded-lg bg-[#fff] shadow-[0px_4px_8px_rgba(0,_0,_0,_0.2)] overflow-hidden flex flex-col p-4 box-border items-end justify-start gap-[16px] max-w-full max-h-full text-right text-[12px] text-[#1e1e1e] font-[IRANYekan]">
       <div className="flex flex-col items-end justify-start gap-[8px]">

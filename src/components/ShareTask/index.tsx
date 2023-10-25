@@ -1,9 +1,10 @@
+import React from "react";
 import EmailForm from "./components/EmailForm";
 import "./index.css";
 
-const ShareWorkspace = () => {
+const ShareProject: React.FC = () => {
   return (
-    <div className="w-[470px] h-auto p-5 bg-[#fff] rounded-xl flex-col justify-start items-center gap-10 inline-flex ltr">
+    <div className="w-[470px] p-5 bg-[#fff] rounded-xl flex-col justify-start items-center gap-10 inline-flex ltr">
       <div className="relative rounded-xl bg-[#fff] w-full overflow-hidden flex flex-col p-5 box-border items-center justify-start gap-[40px] text-center text-[20px] text-[#1e1e1e] font-[IRANYekan]">
         <div className="w-[430px] flex flex-row items-center justify-between">
           <img
@@ -12,7 +13,7 @@ const ShareWorkspace = () => {
             src="/interface-essentialdelete-disabled.svg"
           />
           <div className="relative leading-[30px] capitalize font-extrabold">
-            اشتراک‌گذاری ورک‌اسپیس‌
+            به اشتراک‌گذاری تسک
           </div>
           <img
             className="relative w-6 h-6"
@@ -30,7 +31,7 @@ const ShareWorkspace = () => {
               id="email"
               placeholder=" دعوت با ایمیل"
               className="self-stretch wi relative rounded-r-lg bg-[#f0f1f3] h-10 overflow-hidden shrink-0 border-none text-right w-[76%]"
-            ></input>
+            />
           </div>
           <div className="self-stretch flex flex-row items-center justify-between text-right text-[12px] text-[#1e1e1e]">
             <div className="rounded-md bg-[#fff] overflow-hidden flex flex-row pt-[3px] px-3 pb-0.5 items-center justify-center border-[1px] border-solid border-[#e9ebf0]">
@@ -52,4 +53,4 @@ const ShareWorkspace = () => {
   );
 };
 
-export default ShareWorkspace;
+export default ShareProject;

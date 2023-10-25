@@ -1,7 +1,7 @@
 import EmailForm from "./components/EmailForm";
 import "./index.css";
 
-const ShareProject = () => {
+const ShareProject: React.FC = () => {
   return (
     <div className="w-[470px] p-5 bg-[#fff] rounded-xl flex-col justify-start items-center gap-10 inline-flex ltr">
       <div className="relative rounded-xl bg-[#fff] w-full overflow-hidden flex flex-col p-5 box-border items-center justify-start gap-[40px] text-center text-[20px] text-[#1e1e1e] font-[IRANYekan]">
