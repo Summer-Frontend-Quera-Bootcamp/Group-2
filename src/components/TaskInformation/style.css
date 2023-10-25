@@ -304,3 +304,11 @@
     height: 710px;
     overflow: auto;
 }
+
+.solid400 {
+    width: 90%;
+    height: 5px;
+    margin: 5px 0;
+    border-top: 1px solid #f5f1f1;
+    z-index: 10;
+}

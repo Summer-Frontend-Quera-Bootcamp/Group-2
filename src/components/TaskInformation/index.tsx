@@ -78,6 +78,7 @@ const TaskInformation: React.FC = (): JSX.Element => {
                         </div>
                     </div>
                 </div>
+                <hr className="solid400"></hr>
                 <div className="insertedCommentContainer">
                     <Comments/>
                 </div>
