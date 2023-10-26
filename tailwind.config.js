@@ -32,8 +32,7 @@ export default {
       "yellow-primary": "#FAB005",
       "orange-secondary": "#FFE8CC",
       "orange-primary": "#FD7E14",
-      "white":"color:#fff",
-     
+      "white":"#fff"
     },
     extend: {
       fontFamily: {
@@ -45,4 +44,10 @@ export default {
     // eslint-disable-next-line no-undef
     require('@tailwindcss/forms'),
   ],
+  direction: {
+    ltr: "ltr",
+  },
+  // plugins: [
+  //   require('@tailwindcss/forms'),
+  // ],
 };

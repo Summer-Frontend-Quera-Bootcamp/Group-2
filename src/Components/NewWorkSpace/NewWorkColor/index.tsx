@@ -14,16 +14,16 @@ function New_work_color({ closeModal }: Props){
   // };
     return (
     <>
-        {/* <Helmet>
+        <Helmet>
         <link
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
           rel="stylesheet"
         />
         <link href='https://unpkg.com/css.gg@2.0.0/icons/css/unavailable.css' rel='stylesheet'></link>
-      </Helmet> */}
+      </Helmet>
 
     {/*Page2*/}
-     <div style={{height: "510" , width:"286" , position:"fixed", display:"flex" , top:0 , backgroundColor:"white"}}></div>
+     <div style={{height: "510" , width:"286" , position:"fixed", display:"flex" , top:0 , backgroundColor:"white" , direction:"rtl"}}></div>
     <div style={{display: "flex", flexDirection:"column", alignItems:"center" , justifyContent:"center" , paddingLeft:"35px" , paddingBottom:"20px" , boxShadow:"rgba(0,0,0,0.35) 0px 5px 15px" , position:"fixed"}}>
   <div className='mr-10' style={{display:'flex', flexDirection:"column",  alignItems:"center"}}>
     <div style={{display:"flex" , width:"453px", justifyContent:"space-between" , alignItems:"center"}}>

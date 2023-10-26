@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Upload({
   size = 18, // or any default size of your choice  
-  color="#000"
+  color='black'
 }) {
   return (
     <svg 

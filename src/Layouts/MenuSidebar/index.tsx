@@ -1,8 +1,10 @@
 import React from "react";
+import Exit from "../../components/ShareComponent/Icons/Exit";
+import Moon from  "../../components/ShareComponent/Icons/Moon";
 
 export default function MenuSideBar({children}) {
   return (
-    <aside className="h-screen" style={{ position: "absolute", right: 0 }}>
+    <aside className="h-screen" style={{ position: "absolute", right: 0 , direction:"ltr" }}>
       <nav className="h-full flex flex-col bg-white border-r shadow-lg">
 
         <div className="p-4 pb-2 flex justify-between items-center">
@@ -66,18 +68,14 @@ export default function MenuSideBar({children}) {
         alignSelf: "stretch",
         flexDirection:"row-reverse"
         }}>
+<button style={{ display: "flex", alignItems: "flex-end", gap: "4px" }}>
+  <span style={{ color: "#818181", textAlign: "right", fontFamily: "IRANYekan", fontSize: "16px" }}>خروج</span>
+  <div>
+  <Exit/>
+  </div>
+</button>
 
-        <div style={{display: "flex",
-          alignItems: "flex-end",
-          gap: "4px",
-          }}>
-        <span style={{color: "#818181",
-        textAlign: "right",
-        fontFamily: "IRANYekan",
-        fontSize: "16px",
-        }}>خروج</span>
-        <div>icon</div>
-        </div>
+
 
 
         <div className="bg-[#F1F3F5] " style={{width:'64px', height:'36px', padding:" 3px 3px 3px 31px" , justifyContent:"flex-end" , alignItems:"center" , borderRadius:"8px"}}>
@@ -91,8 +89,8 @@ export default function MenuSideBar({children}) {
           gap: "4px",
           }}>
             <div style={{width: "var(--M, 24px)",
-            height: "var(--M, 24px)",                 //put icon here
-            }}></div>
+            height: "var(--M, 24px)",
+            }}><Moon/></div>
           </div>
 
         </div>
