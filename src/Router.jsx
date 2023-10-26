@@ -1,4 +1,5 @@
 import { Route, Routes /*Navigate*/ } from "react-router-dom";
+import Test from "../src/pages/Test/Test";
 
 export default function Router() {
   return (
@@ -7,7 +8,7 @@ export default function Router() {
         <Route path="/login" /*element={<Login />}*/ />
         <Route path="/register" /*element={<Register />}*/ />
         <Route path="/forgot" /* element={<Forgot />}*/ />
-        <Route path="/test" /*element={<Index />}*/ />
+        <Route path="/test" element={<Test />} />
         {/*<Route path="/*" element={<Navigate to="" />} />*/}
       </Routes>
     </div>
