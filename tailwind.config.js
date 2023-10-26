@@ -13,7 +13,7 @@ export default {
       "grape-secondary": "#F3D9FA",
       "grape-primary": "#BE4BDB",
       "violet-secondary": "#E5DBFF",
-      "violet-primary": "#7950F2",
+      "violet-primary": "#6E42E2",
       "indigo-secondary": "#DBE4FF",
       "indigo-primary": "#4C6EF5",
       "blue-secondary": "#D0EBFF",
@@ -32,7 +32,8 @@ export default {
       "yellow-primary": "#FAB005",
       "orange-secondary": "#FFE8CC",
       "orange-primary": "#FD7E14",
-      "white":"color:#fff"
+      "white":"color:#fff",
+     
     },
     extend: {
       fontFamily: {
@@ -41,6 +42,7 @@ export default {
     },
   },
   plugins: [
+    // eslint-disable-next-line no-undef
     require('@tailwindcss/forms'),
   ],
 };

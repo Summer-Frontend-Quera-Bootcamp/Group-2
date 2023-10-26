@@ -5,6 +5,7 @@ import LoginRegister from "./components/LoginRegister"
 function App() {
   return (
     <>
+    <LoginRegister/>
       <Router />
     </>
   );
