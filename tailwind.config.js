@@ -21,7 +21,7 @@ export default {
       "cyan-secondary": "#C5F6FA",
       "cyan-primary": "#15AABF",
       "teal-secondary": "#C3FAE8",
-      "teal=primary": "#12B886",
+      "teal-primary": "#12B886",
       "brand-secondary": "#C2F7FA",
       "brand-primary": "#208D8E",
       "green-secondary": "#D3F9D8",
@@ -32,7 +32,7 @@ export default {
       "yellow-primary": "#FAB005",
       "orange-secondary": "#FFE8CC",
       "orange-primary": "#FD7E14",
-      "white":"color:#fff"
+      "white":"#fff"
     },
     extend: {
       fontFamily: {
@@ -40,7 +40,10 @@ export default {
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-  ],
+  direction: {
+    ltr: "ltr",
+  },
+  // plugins: [
+  //   require('@tailwindcss/forms'),
+  // ],
 };

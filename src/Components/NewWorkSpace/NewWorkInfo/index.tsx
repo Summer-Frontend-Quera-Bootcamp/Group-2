@@ -6,16 +6,16 @@ interface Props {
 function New_work_info({ closeModal }: Props) {
     return (
     <>
-          {/* <Helmet>
+          <Helmet>
         <link
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
           rel="stylesheet"
         />
         <link href='https://unpkg.com/css.gg@2.0.0/icons/css/unavailable.css' rel='stylesheet'></link>
-      </Helmet> */}
+      </Helmet>
 
       {/* Page3 */}
-      <div style={{height: "510px" , width:"286px" , position:"fixed", display:"flex" , top:0 , backgroundColor:"white"}}></div>
+      <div style={{height: "510px" , width:"286px" , position:"fixed", display:"flex" , top:0 , backgroundColor:"white" , direction:"ltr"}}></div>
 <div style={{display: "inline-flex", width:"501px", flexDirection:"column", alignItems:"center" , justifyContent:"center" , paddingLeft:"30px" , paddingBottom:"20px" , boxShadow:"rgba(0,0,0,0.35) 0px 5px 15px", position:"fixed" , marginRight:"45px", marginTop:"-265px"}}>
        <div className='' style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
         <div style={{display:"flex" , width:"453px", flexDirection:"column" , alignItems:"flex-start"}}>

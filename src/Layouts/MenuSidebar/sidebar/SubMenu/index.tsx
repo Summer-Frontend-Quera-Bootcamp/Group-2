@@ -1,12 +1,12 @@
 import React from "react";
-import MenuSideBar from "..";
-import { SidebarItem } from "..";
+import MenuSideBar from "../..";
+import { SidebarItem } from "../..";
 
 function SubMenu() {
   return (
     <>
       <MenuSideBar>
-      <li>
+      <li style={{direction:"ltr"}}>
 
       <div style={{display: "flex",
       justifyContent:"space-between",
@@ -68,11 +68,11 @@ alignSelf: "stretch",
 background: "#D3D3D3",
 borderRadius: "6px",
 }}>
-  <p>ساختن اسپیس جدید</p>
+  <p>ساختن ورک اسپیس جدید</p>
   <button style={{width: "var(--M, 24px)",
   height: "var(--M, 24px)",
   flexShrink: "0",
-  }}>icon</button>
+  }}></button>
 
 </div>
 
