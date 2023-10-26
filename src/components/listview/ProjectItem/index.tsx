@@ -83,7 +83,7 @@ const ProjectItem: React.FC<{ project: Project }> = ({ project }) => {
                   </div>
                 </div>
                 <div className="text-right font-IRANYekan text-[12px] font-normal leading-normal uppercase">
-                  تسک {project.pendingTasks.length}
+                {project.pendingTasks.length} تسک 
                 </div>
               </div>
               <div className="flex w-[473px] items-start gap-[70px] text-right font-IRANYekan text-[16px] font-medium leading-normal uppercase">
@@ -150,7 +150,7 @@ const ProjectItem: React.FC<{ project: Project }> = ({ project }) => {
                   </div>
                 </div>
                 <div className="text-right font-IRANYekan text-[12px] font-normal leading-normal uppercase">
-                  تسک {project.inProgressTasks.length}
+                {project.inProgressTasks.length} تسک 
                 </div>
               </div>
               <div className="flex w-[473px] items-start gap-[70px] text-right font-IRANYekan text-[16px] font-medium leading-normal uppercase">
@@ -208,15 +208,15 @@ const ProjectItem: React.FC<{ project: Project }> = ({ project }) => {
                 className="flex justify-end items-center gap-[5px]"
                 onClick={toggleDoneExpand}
               >
-                <div className="text-right font-IRANYekan text-[12px] font-normal leading-normal uppercase">
-                  تسک {project.doneTasks.length}
-                </div>
+                <DownCircle />
                 <div className="flex px-[6px] py-1 items-start gap-[10px] rounded bg-[#40C057]">
                   <div className=" text-[#FFF] text-center font-IRANYekan text-[16px] leading-normal">
                     Done
                   </div>
                 </div>
-                <DownCircle />
+                <div className="text-right font-IRANYekan text-[12px] font-normal leading-normal uppercase">
+                {project.doneTasks.length} تسک 
+                </div>
               </div>
               <div className="flex w-[473px] items-start gap-[70px] text-right font-IRANYekan text-[16px] font-medium leading-normal uppercase">
                 <div className="flex w-[70px] px-[10px] py-0 justify-center items-center gap-[10px] flex-shrink-0">
@@ -234,33 +234,33 @@ const ProjectItem: React.FC<{ project: Project }> = ({ project }) => {
               </div>
             </div>
             {isDoneExpanded && (
-              <div className="flex flex-col items-start gap-[19px]">
+              <div className="flex flex-col items-start gap-[19px] mr-10">
                 {project.doneTasks.map((task) => (
                   <div
                     className="flex w-[986px] py-[7px] px-0 justify-between items-center rounded bg-[#FFF]"
                     key={task.id}
                   >
-                    <div className="flex w-[490px] items-center gap-[70px]">
-                      <div className="flex w-[70px] px-[10px] py-0 justify-center items-center gap-[10px]">
-                        {descriptionState(task.description)}
+                    <div className="flex items-start gap-[7px]">
+                      <div className="w-4 h-4 rounded-[3px] bg-[#40C057]" />
+                      <div className="text-[#0E0E0E] text-right font-IRANYekan text-[12px] font-normal leading-normal uppercase">
+                        {task.title}
                       </div>
-                      <div className="flex w-[70px] px-[10px] py-0 justify-center items-center gap-[10px]">
-                        {getPriorityIcon(task.priority)}
+                    </div>
+                    <div className="flex w-[490px] items-center gap-[70px]">
+                      <div className="flex w-[70px] justify-center items-center gap-[-8px]">
+                        {task.users.length > 0 && <p>{task.users.join(", ")}</p>}
                       </div>
                       <div className="flex w-[70px] px-[10px] py-0 justify-center items-center gap-[10px]">
                         <div className="text-[#0E0E0E] text-right font-IRANYekan text-[12px] font-normal leading-normal uppercase">
                           {task.deadline}
                         </div>
                       </div>
-                      <div className="flex w-[70px] justify-center items-center gap-[-8px]">
-                        {task.users.length > 0 && <p>{task.users.join(", ")}</p>}
+                      <div className="flex w-[70px] px-[10px] py-0 justify-center items-center gap-[10px]">
+                        {getPriorityIcon(task.priority)}
                       </div>
-                    </div>
-                    <div className="flex items-start gap-[7px]">
-                      <div className="text-[#0E0E0E] text-right font-IRANYekan text-[12px] font-normal leading-normal uppercase">
-                        {task.title}
+                      <div className="flex w-[70px] px-[10px] py-0 justify-center items-center gap-[10px]">
+                        {descriptionState(task.description)}
                       </div>
-                      <div className="w-4 h-4 rounded-[3px] bg-[#40C057]" />
                     </div>
                   </div>
                 ))}

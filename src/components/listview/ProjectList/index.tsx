@@ -68,7 +68,14 @@ const ProjectList: React.FC = () => {
         },
       ],
       doneTasks: [
-        
+        {
+          id: 5,
+          title: "این یک تیتر برای این تسک است.",
+          description: "-",
+          users: ["*"],
+          deadline: "6 آبان",
+          priority: 0,
+        },
       ],
     },
     
@@ -78,7 +85,7 @@ const ProjectList: React.FC = () => {
   return (
     <div className="flex flex-col items-start gap-10">
       {projects.map((project) => (
-        <ProjectItem key={project.id} project={project} />
+        <ProjectItem key={project.id} project={(project)} />
       ))}
     </div>
   );
