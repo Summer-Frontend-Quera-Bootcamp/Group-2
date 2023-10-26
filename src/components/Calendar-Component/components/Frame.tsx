@@ -3,28 +3,43 @@ import Modal from "react-modal";
 
 interface modalOpen {
   modalIsOpen: boolean;
+  closeModal: () => void;
+  data: string;
 }
 
-const Frame: React.FC<modalOpen> = ({ modalIsOpen = true }) => {
+const Frame: React.FC<modalOpen> = ({ modalIsOpen, closeModal, data }) => {
   return (
     <>
       <Modal
         isOpen={modalIsOpen}
-        overlayClassName={"overlay"}
-        className="absolute "
+        onRequestClose={closeModal}
+        style={{
+          overlay: {
+            background: "none",
+            border: "none",
+            zIndex: "10",
+            padding: "150px",
+          },
+          content: {
+            background: "none",
+            border: "none",
+            padding: "145px",
+          },
+        }}
       >
-        <div className="z-10 w-[436px] relative rounded-lg bg-[#fff] shadow-[0px_8px_16px_rgba(0,_0,_0,_0.2)] flex flex-col items-start justify-start p-5 gap-[32px] text-right text-[20px] text-[#c8c8c8] font-[Iran-Yekan] border-[1px] border-solid border-[#208d8e] ">
+        <div className=" w-[436px] relative rounded-lg bg-[#fff] shadow-[0px_8px_16px_rgba(0,_0,_0,_0.2)] flex flex-col items-start justify-start p-5 gap-[32px] text-right text-[20px] text-[#c8c8c8] font-[Iran-Yekan] border-[1px] border-solid border-[#208d8e] ">
           <div className="self-stretch flex flex-row items-center justify-end gap-[8px]">
             <input
               type="text"
               placeholder="نام تسک را وارد کنید"
-              className="relative capitalize font-medium text-right border-none w-full h-[28px] text-[20px]"
+              className="relative capitalize font-medium text-right border-none w-full h-[28px] text-[20px] text-[black] rounded-lg"
             />
 
             <img
-              className="relative w-6 h-6"
+              className="relative w-6 h-6 cursor-pointer"
               alt="close tag"
               src="/interface-essentialdelete-disabled.svg"
+              onClick={closeModal}
             />
           </div>
           <div className="self-stretch flex flex-row items-center justify-between text-[12px] text-[#fff] ">
@@ -32,10 +47,12 @@ const Frame: React.FC<modalOpen> = ({ modalIsOpen = true }) => {
               ساختن تسک
             </button>
             <div className="flex flex-row items-center justify-end gap-[12px] text-[20px] text-[#208d8e] ">
-              <div className="relative capitalize font-medium">۱۴ تیر</div>
+              <div className="relative capitalize font-medium text-[20px]">
+                {data}
+              </div>
               <div className="rounded-[138.89px] w-[50px] h-[50px] flex flex-row items-center justify-center p-[6.6px] box-border">
                 <img
-                  className="relative w-[29.41px] h-[29.41px]"
+                  className="relative w-[29.41px] h-[29.41px] cursor-pointer"
                   alt="flag icon"
                   src="/interface-essentialflag.svg"
                 />

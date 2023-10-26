@@ -5,6 +5,7 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import fa from "@fullcalendar/core/locales/fa";
 import Frame from "../Calendar-Component/components/Frame";
+
 function Calendar() {
   const events = [
     {
@@ -16,14 +17,18 @@ function Calendar() {
 
   const handleDateClick = (info: EventClickArg) => {
     openModal(!open);
-    FullCalendar;
+    setDate(info.dateStr.toString());
   };
-
+  const [date, setDate] = useState("");
   const [open, openModal] = useState(false);
 
   return (
-    <div className="w-[750px] z-0">
-      <Frame modalIsOpen={open} />
+    <div className="w-[750px]">
+      <Frame
+        modalIsOpen={open}
+        closeModal={() => openModal(false)}
+        data={date}
+      />
       <FullCalendar
         events={events}
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
