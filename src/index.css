@@ -4,30 +4,45 @@
 
 @font-face {
   font-family: "Iran-Yekan";
-  src: url("../assets/fonts/Yekan.ttf"),url("../assets/fonts/Yekan.eot"),
-  url("../assets/fonts/Yekan.woff"),url("../assets/fonts/Yekan.woff2");
+  src: url("../assets/fonts/Yekan.ttf"), url("../assets/fonts/Yekan.eot"),
+    url("../assets/fonts/Yekan.woff"), url("../assets/fonts/Yekan.woff2");
 }
-body,*:not(i){
+body,
+*:not(i) {
   font-family: "Iran-Yekan";
 }
-[type='text']:focus, input:where(:not([type])):focus,
- [type='email']:focus, [type='url']:focus, [type='password']:focus, 
- [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus,
-  [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus,
-   [type='week']:focus, [multiple]:focus, textarea:focus,
-    select:focus{
-      border-color: #47b2b3; 
-         --tw-ring-color: #47b2b3;
-        }
-        [type='checkbox']:checked:hover, [type='checkbox']:checked:focus,
-         [type='radio']:checked:hover, [type='radio']:checked:focus,
-         [type='checkbox']:checked, [type='radio']:checked {
-          border-color: transparent;
-          background-color: #208d8e;
-          border-color: #47b2b3; 
-         --tw-ring-color: #47b2b3;
-      }
-      [type='checkbox']:focus, [type='radio']:focus{
-        border-color: #47b2b3; 
-         --tw-ring-color: #47b2b3;
-      }
+[type="text"]:focus,
+input:where(:not([type])):focus,
+[type="email"]:focus,
+[type="url"]:focus,
+[type="password"]:focus,
+[type="number"]:focus,
+[type="date"]:focus,
+[type="datetime-local"]:focus,
+[type="month"]:focus,
+[type="search"]:focus,
+[type="tel"]:focus,
+[type="time"]:focus,
+[type="week"]:focus,
+[multiple]:focus,
+textarea:focus,
+select:focus {
+  border-color: #47b2b3;
+  --tw-ring-color: #47b2b3;
+}
+[type="checkbox"]:checked:hover,
+[type="checkbox"]:checked:focus,
+[type="radio"]:checked:hover,
+[type="radio"]:checked:focus,
+[type="checkbox"]:checked,
+[type="radio"]:checked {
+  border-color: transparent;
+  background-color: #208d8e;
+  border-color: #47b2b3;
+  --tw-ring-color: #47b2b3;
+}
+[type="checkbox"]:focus,
+[type="radio"]:focus {
+  border-color: #47b2b3;
+  --tw-ring-color: #47b2b3;
+}

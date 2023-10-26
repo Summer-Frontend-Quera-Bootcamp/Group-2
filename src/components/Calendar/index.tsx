@@ -16,13 +16,18 @@ function Calendar() {
 
   const handleDateClick = (info: EventClickArg) => {
     openModal(!open);
+    setDate(info.dateStr.toString());
   };
-
+  const [date, setDate] = useState("");
   const [open, openModal] = useState(false);
 
   return (
     <div className="w-[750px] z-0">
-      <Frame modalIsOpen={open} closeModal={() => openModal(false)} />
+      <Frame
+        modalIsOpen={open}
+        closeModal={() => openModal(false)}
+        data={date}
+      />
       <FullCalendar
         events={events}
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
