@@ -2,6 +2,21 @@ import React from "react";
 import EmailForm from "./components/EmailForm";
 import "./index.css";
 
+interface User {
+  id: Number;
+  username: String;
+  email: String;
+  first_name: String;
+  last_name: String;
+  phone_number: Number;
+  thumbnail: String;
+}
+
+interface ProjectMember {
+  id: Number;
+  user: User[];
+}
+
 const ShareWorkspace: React.FC = () => {
   return (
     <div className="w-[470px] h-auto p-5 bg-[#fff] rounded-xl flex-col justify-start items-center gap-10 inline-flex ltr">

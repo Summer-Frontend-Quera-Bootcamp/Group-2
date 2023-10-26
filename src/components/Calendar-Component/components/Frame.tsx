@@ -23,7 +23,7 @@ const Frame: React.FC<modalOpen> = ({ modalIsOpen, closeModal }) => {
             />
 
             <img
-              className="relative w-6 h-6"
+              className="relative w-6 h-6 cursor-pointer"
               alt="close tag"
               src="/interface-essentialdelete-disabled.svg"
               onClick={closeModal}
@@ -37,7 +37,7 @@ const Frame: React.FC<modalOpen> = ({ modalIsOpen, closeModal }) => {
               <div className="relative capitalize font-medium">۱۴ تیر</div>
               <div className="rounded-[138.89px] w-[50px] h-[50px] flex flex-row items-center justify-center p-[6.6px] box-border">
                 <img
-                  className="relative w-[29.41px] h-[29.41px]"
+                  className="relative w-[29.41px] h-[29.41px] cursor-pointer"
                   alt="flag icon"
                   src="/interface-essentialflag.svg"
                 />
