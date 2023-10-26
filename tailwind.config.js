@@ -47,7 +47,4 @@ export default {
   direction: {
     ltr: "ltr",
   },
-  // plugins: [
-  //   require('@tailwindcss/forms'),
-  // ],
 };
