@@ -5,6 +5,7 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import fa from "@fullcalendar/core/locales/fa";
 import Frame from "../Calendar-Component/components/Frame";
+
 function Calendar() {
   const events = [
     {
@@ -22,7 +23,7 @@ function Calendar() {
   const [open, openModal] = useState(false);
 
   return (
-    <div className="w-[750px] z-0">
+    <div className="w-[750px]">
       <Frame
         modalIsOpen={open}
         closeModal={() => openModal(false)}
