@@ -138,9 +138,10 @@ const TagMenu: React.FC<TagComponentProps> = ({
         name: tagNameEdit,
         color: editColor,
       });
-      setTags(tags);
+      setTags(tags);  
       ``;
       console.log(tags);
+      setLastTagID(lastTagID+1);
       setIsNewTagOpen(!isNewTagOpen);
       setTagNameEdit("");
     }
