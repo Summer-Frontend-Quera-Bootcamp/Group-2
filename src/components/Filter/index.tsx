@@ -1,33 +1,67 @@
 import React, { useState } from "react";
-import SearchableSelect from '../ShareComponent/SearchableSelect';
 import "./style.css";
+import FilterProps from "./FilterProps";
 const Filter: React.FC = (): JSX.Element => {
-const filtersAllOptions = ["تاریخ", "تگ", "اعضا", "اولویت"];
-const tagOptions = ["درس", "کار", "پروژه", "تیم"];
+    const filtersAllOptions = ["تاریخ", "تگ", "اعضا", "اولویت"];
+    const tagOptions = ["درس", "کار", "پروژه", "تیم"];
+    const [filterPropsList, setFilterPropsList] = useState<
+        { id: number; component: JSX.Element }[]
+    >([]);
+    const [nextId, setNextId] = useState(0);
+    const [childData, setChildData] = useState(0);
 
+    const handleChildClick = (id: number) => {
+        setChildData(id);
+        console.log(childData);
+        handleDeleteFilter(childData);
+    };
+
+    const handleAddFilterClick = () => {
+        const newFilterPropsList = [...filterPropsList];
+        // const id = nextId;
+        console.log("last added id: " + nextId);
+        newFilterPropsList.push({
+            id: nextId,
+            component: (
+                <FilterProps
+                    id={nextId}
+                    _allOptions1={filtersAllOptions}
+                    _allOptions2={tagOptions}
+                    onDelete={handleChildClick}
+                />
+            ),
+        });
+        setFilterPropsList(newFilterPropsList);
+        setNextId(nextId + 1);
+    };
+
+    const handleDeleteFilter = (id: number) => {
+        console.log(id);
+        const newFilterPropsList = filterPropsList.filter(
+            (filterProps) => filterProps.id !== id
+        );
+        setFilterPropsList(newFilterPropsList);
+    };
     return (
         <div className="container210">
             <div className="filterTitleLayout">
                 <span className="text210">فیلترها</span>
-                <img src="../../assets/img/black-exit-icon.png" className="cursor-pointer" alt="x" />
+                <img
+                    src="../../assets/img/black-exit-icon.png"
+                    className="cursor-pointer"
+                    alt="x"
+                />
             </div>
-            <div className="FiltersLayout">
-                <span className="textInFilterRowInfo1">تسک هایی که</span>
-                <SearchableSelect _label="فیلترها" _allOptions={filtersAllOptions} _placeHolder="جستجو بین فیلترها"></SearchableSelect>
-                {/* <select className="tagPickerLayout cursor-pointer">
-                    <option value="1"></option>
-                    <option value="2">درس</option>
-                </select> */}
-                <span className="textInFilterRowInfo1">آن ها</span>
-                <SearchableSelect _label="تگ ها" _allOptions={tagOptions} _placeHolder="جستجو"></SearchableSelect>
-                <select className="tagPickerLayout cursor-pointer my-auto">
-                    <option value="1">است</option>
-                    <option value="2">نیست</option>
-                </select>
-                <img src="../../assets/img/trash-bin-icon.png" className="my-auto cursor-pointer" alt="delete icon" />
-                
-            </div>
-            <button className="addNewFilterText">
+            {filterPropsList.map((filterProps) => (
+                <React.Fragment key={filterProps.id}>
+                    {filterProps.component}
+                </React.Fragment>
+            ))}
+            {/* <FilterProps
+                _allOptions1={filtersAllOptions}
+                _allOptions2={tagOptions}
+            ></FilterProps> */}
+            <button className="addNewFilterText" onClick={handleAddFilterClick}>
                 افزودن فیلتر جدید
             </button>
         </div>

@@ -1,12 +1,12 @@
 import "./App.css";
+import Filter from "./components/Filter";
 
-import TaskInformation from "./components/TaskInformation";
 import Router from "./Router";
 
 function App() {
     return (
         <>
-            <TaskInformation />
+            <Filter />
 
             <Router />
         </>
