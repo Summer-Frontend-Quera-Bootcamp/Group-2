@@ -8,14 +8,10 @@ import Frame from "../Calendar-Component/components/Frame";
 
 function Calendar() {
   const events = [
-    {
-      title: "تست",
-      start: "2023-10-20",
-      end: "2023-10-23",
-    },
+    
   ];
 
-  const handleDateClick = (info: EventClickArg) => {
+  const handleDateClick = (info) => {
     openModal(!open);
     setDate(info.dateStr.toString());
   };
@@ -23,13 +19,14 @@ function Calendar() {
   const [open, openModal] = useState(false);
 
   return (
-    <div className="w-[750px]">
+    <div className="w-[screenpx] pl-10 pr-8 font-IRANYekanWeb">
       <Frame
         modalIsOpen={open}
         closeModal={() => openModal(false)}
         data={date}
       />
       <FullCalendar
+      height={940}
         events={events}
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
         initialView="dayGridMonth"

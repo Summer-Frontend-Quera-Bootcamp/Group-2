@@ -150,7 +150,7 @@ const TagMenu: React.FC<TagComponentProps> = ({
       <Modal
         isOpen={isTagMenuOpen}
         onRequestClose={() => setMenuVisible(false)}
-        className="modal flex flex-col absolute items-center mt-[10px] mr-[160px]  "
+        className=" z-10 modal flex flex-col absolute items-center mt-[-300px] mr-[340px]  "
         overlayClassName="overlay"
       >
         <div className="inline-flex text-[#FFF] p-2 flex-col items-start rounded-lg bg-[#FFF] shadow-[0px_4px_16px_rgba(0,0,0,0.16)] mr-[100px]">
@@ -199,7 +199,7 @@ const TagMenu: React.FC<TagComponentProps> = ({
         <Modal
           isOpen={isTagOptionOpen}
           overlayClassName="overlay"
-          className="modal flex flex-col absolute items-center mt-[100px] mr-[485px]"
+          className="z-10 modal flex flex-col absolute items-center mt-[-200px] mr-[670px]  "
         >
           <div className="modal absolute flex flex-col p-2 items-end gap-4 rounded-lg bg-[#FFF] shadow-[0px_4px_16px_0px_rgba(0,0,0,0.16)]">
             <div className="flex flex-col items-start gap-2 w-[75px]">
@@ -248,7 +248,7 @@ const TagMenu: React.FC<TagComponentProps> = ({
         <Modal
           isOpen={isTagNameEditOpen && isTagOptionOpen}
           overlayClassName="overlay"
-          className="modal flex flex-col absolute items-center mt-[140px] mr-[545px]"
+          className="z-10 modal flex flex-col absolute items-center mt-[-150px] mr-[730px]"
         >
           <div className="flex p-2 flex-col items-start gap-4 rounded-lg bg-[#FFF] shadow-[0px_4px_16px_0px_rgba(0,0,0,0.16)]">
             <input
@@ -267,7 +267,7 @@ const TagMenu: React.FC<TagComponentProps> = ({
         <Modal
           isOpen={isTagColorEditOpen && isTagOptionOpen}
           overlayClassName="overlay"
-          className="modal flex flex-col absolute items-center mt-[140px] mr-[545px]"
+          className="z-10 modal flex flex-col absolute items-center mt-[-150px] mr-[730px]"
         >
           <div className="flex p-2 flex-col justify-center items-start gap-[11px] rounded-lg bg-[#FFF] shadow-[0px_4px_8px_0px_rgba(0,0,0,0.18)]">
             <div className="flex w-[132px] justify-start items-center gap-2 flex-wrap">
@@ -368,7 +368,7 @@ const TagMenu: React.FC<TagComponentProps> = ({
         <Modal
           isOpen={isNewTagOpen}
           overlayClassName="overlay"
-          className="modal flex flex-col absolute items-center mt-[30px] mr-[440px]"
+          className="z-10 modal flex flex-col absolute items-center mt-[-260px] mr-[630px]"
         >
           <div className="flex p-2 flex-col w-[160px] items-start gap-3 rounded-lg bg-[#FFF] shadow-[0px_4px_16px_0px_rgba(0,0,0,0.16)]">
             <input

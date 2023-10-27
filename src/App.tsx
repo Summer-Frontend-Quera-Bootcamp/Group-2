@@ -11,6 +11,10 @@ import Forgetpassword from "./pages/ForgetPassword";
 import Login from "./pages/Login";
 import RegisterPage from "./pages/Register";
 import RecoveryMail from "./pages/RecoveryMail";
+import Layout from "./Layouts/layout";
+import MenuSideBar from "./Layouts/MenuSidebar";
+import SubMenu from "./Layouts/MenuSidebar/sidebar/SubMenu";
+import ShareWorkspace from "./components/ShareWorkSpace";
 
 const App = ():JSX.Element =>{
   return (
@@ -25,7 +29,8 @@ const App = ():JSX.Element =>{
             <Route path="/Forgetpassword" element={<Forgetpassword/>}></Route>  
             <Route path="/RecoveryMail" element={<RecoveryMail/>}></Route>                                   
           </Route>
-          <Route path="/Boardview" element={<Boardview/>}></Route>   
+            <Route path='/Board' element={<SubMenu/>}>
+            </Route>
          </Routes>
         </BrowserRouter>
         </StrictMode>

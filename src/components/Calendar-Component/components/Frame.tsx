@@ -19,6 +19,7 @@ const Frame: React.FC<modalOpen> = ({ modalIsOpen, closeModal, data }) => {
             border: "none",
             zIndex: "10",
             padding: "150px",
+            marginRight: "200px",
           },
           content: {
             background: "none",

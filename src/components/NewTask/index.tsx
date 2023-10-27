@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import Modal from 'react-modal';
 import Close from '../ShareComponent/Icons/Close'
 import UserAdd from "../ShareComponent/Icons/UserAdd";
 import Flag from "../ShareComponent/Icons/Flag";
@@ -8,7 +9,11 @@ import AttachLink from "../ShareComponent/Icons/AttachLink";
 import TagMenu from './NewTaskCompSmallComponents/TagMenu';
 import PriorityMenu from './NewTaskCompSmallComponents/PriorityMenu';
 
-const NewTaskCard: React.FC = () => {
+interface NewTaskComponentProps {
+  isNewTaskOpen: boolean;
+  closeNewTask: () => void;
+}
+const NewTaskCard: React.FC<NewTaskComponentProps> = ({isNewTaskOpen,closeNewTask}) => {
   const [isTagsOpen,setIsTagsOpen] = useState(false);
   const [isPriorityOpen,setIsPriorityOpen] = useState(false);
   const [tagName,setTagName] = useState('');
@@ -39,7 +44,23 @@ const NewTaskCard: React.FC = () => {
     }
   };
   return (
-    <div className="flex flex-col items-end w-[1153px] p-8 gap-10 bg-white shadow-[0px_12px_32px_0px_rgba(0, 0, 0, 0.25)]">
+    <Modal isOpen={isNewTaskOpen}
+    onRequestClose={closeNewTask}
+        style={{
+          overlay: {
+            background: "none",
+            border: "none",
+            zIndex: "10",
+            padding: "150px",
+            marginRight: "200px",
+          },
+          content: {
+            background: "none",
+            border: "none",
+            padding: "145px",
+          },
+        }}>
+    <div className="flex flex-col items-end w-[1153px] p-8 gap-10 rounded-lg bg-white shadow-[0px_4px_16px_rgba(0,0,0,0.16)]">
       <div className="flex self-stretch items-center justify-between w-full h-auto">
         <div className="flex flex-row items-center gap-[13px]">
           <div className="w-4 h-4 rounded-0.5 bg-[#D9D9D9] self-center"></div>
@@ -47,7 +68,7 @@ const NewTaskCard: React.FC = () => {
             عنوان تسک
           </div>
         </div>
-        <button className="flex w-8 h-8 justify-center items-center">
+        <button className="flex w-8 h-8 justify-center items-center" onClick={closeNewTask}>
           <Close size={32} />
         </button>
       </div>
@@ -118,9 +139,10 @@ const NewTaskCard: React.FC = () => {
               <TagMenu tagNameAssign={handleTagName} isTagMenuOpen={isTagsOpen}/>
               <PriorityMenu priorityAssign={handlePriority} isPriorityMenuOpen={isPriorityOpen}/>
         </div>
-        <button className="flex w-[125px] h-8 px-[7px] py-1 justify-center items-center gap-[10px] rounded bg-[#208D8E] text-white text-right text-xs font-normal capitalize">ساختن تسک</button>
+        <button className="flex w-[125px] h-8 px-[7px] py-1 justify-center items-center gap-[10px] rounded bg-[#208D8E] text-white text-right text-xs font-normal capitalize" onClick={closeNewTask}>ساختن تسک</button>
       </div>
     </div>
+    </Modal>
   );
 };
 

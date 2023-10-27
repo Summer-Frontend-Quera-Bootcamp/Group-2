@@ -15,7 +15,7 @@ const PriorityMenu: React.FC<priorityComponentProps> = ({ priorityAssign, isPrio
     }
     return (
         <div>
-            <Modal isOpen={isPriorityMenuOpen} overlayClassName='overlay' className='modal flex flex-col absolute items-center mt-[10px] mr-[70px]'>
+            <Modal isOpen={isPriorityMenuOpen} overlayClassName='overlay' className='z-10 modal flex flex-col absolute items-center mt-[-300px] mr-[430px]'>
                 <div className="flex p-2 flex-col items-end gap-4 rounded-lg bg-[#FFF] shadow-[0px_4px_16px_0px_rgba(0,0,0,0.16)]">
                     <div className="flex flex-col items-start gap-2">
                         <button className="flex w-[142px] justify-start items-center gap-2" onClick={()=>{

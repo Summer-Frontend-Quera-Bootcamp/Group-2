@@ -1,6 +1,7 @@
 import EmailForm from "./components/EmailForm";
 import React from "react";
 import "./index.css";
+import Modal from "react-modal";
 
 interface User {
   id: Number;
@@ -17,9 +18,30 @@ interface ProjectMember {
   user: User[];
 }
 
-const ShareProject: React.FC = () => {
+interface ShareProjectComponentProps {
+  isShareProjectOpen: boolean;
+  closeShareProject: () => void;
+}
+
+const ShareProject: React.FC<ShareProjectComponentProps> = ({isShareProjectOpen,closeShareProject}) => {
   return (
-    <div className="w-[470px] p-5 bg-[#fff] rounded-xl flex-col justify-start items-center gap-10 inline-flex ltr">
+    <Modal isOpen={isShareProjectOpen}
+    onRequestClose={closeShareProject}
+        style={{
+          overlay: {
+            background: "none",
+            border: "none",
+            zIndex: "10",
+            padding: "150px",
+            marginRight: "200px",
+          },
+          content: {
+            background: "none",
+            border: "none",
+            padding: "145px",
+          },
+        }}>
+    <div className="w-[470px] p-5 bg-[#fff] rounded-xl flex-col justify-start items-center gap-10 inline-flex ltr shadow-[0px_4px_16px_rgba(0,0,0,0.16)] mr-[100px]">
       <div className="relative rounded-xl bg-[#fff] w-full overflow-hidden flex flex-col p-5 box-border items-center justify-start gap-[40px] text-center text-[20px] text-[#1e1e1e] font-[IRANYekan]">
         <div className="w-[430px] flex flex-row items-center justify-between">
           <img
@@ -30,11 +52,13 @@ const ShareProject: React.FC = () => {
           <div className="relative leading-[30px] capitalize font-extrabold">
             به اشتراک‌گذاری پروژه‌
           </div>
+          <button onClick={closeShareProject}>
           <img
             className="relative w-6 h-6"
             alt=""
             src="/interface-essentialdelete-disabled1.svg"
           />
+          </button>
         </div>
         <div className="self-stretch flex flex-col items-start justify-start gap-[24px] text-[14px] text-[#fff]">
           <div className="w-full flex from-group">
@@ -61,10 +85,10 @@ const ShareProject: React.FC = () => {
               />
             </div>
           </div>
-          <EmailForm />
         </div>
       </div>
     </div>
+    </Modal>
   );
 };
 

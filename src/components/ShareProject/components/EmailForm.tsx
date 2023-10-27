@@ -57,15 +57,6 @@ const EmailForm: React.FC = () => {
           </div>
         </div>
       </div>
-      {isPermissionOpen && (
-        <PortalPopup
-          overlayColor="rgba(113, 113, 113, 0.3)"
-          placement="Centered"
-          onOutsideClick={closePermission}
-        >
-          <Permission onClose={closePermission} />
-        </PortalPopup>
-      )}
     </>
   );
 };
