@@ -8,12 +8,12 @@ export default {
       "gray-dark": "#343A40",
       "red-secondary": "#FFE3E3",
       "red-primary": "#FA5252",
-      "pink-secondary": "#E64980",
+      "pink-secondary": "#FBCFE8",
       "pink-primary": "#E64980",
       "grape-secondary": "#F3D9FA",
       "grape-primary": "#BE4BDB",
       "violet-secondary": "#E5DBFF",
-      "violet-primary": "#E5DBFF",
+      "violet-primary": "#6E42E2",
       "indigo-secondary": "#DBE4FF",
       "indigo-primary": "#4C6EF5",
       "blue-secondary": "#D0EBFF",
@@ -21,7 +21,7 @@ export default {
       "cyan-secondary": "#C5F6FA",
       "cyan-primary": "#15AABF",
       "teal-secondary": "#C3FAE8",
-      "teal=primary": "#12B886",
+      "teal-primary": "#12B886",
       "brand-secondary": "#C2F7FA",
       "brand-primary": "#208D8E",
       "green-secondary": "#D3F9D8",
@@ -32,7 +32,7 @@ export default {
       "yellow-primary": "#FAB005",
       "orange-secondary": "#FFE8CC",
       "orange-primary": "#FD7E14",
-      "white":"color:#fff"
+      "white":"#fff"
     },
     extend: {
       fontFamily: {
@@ -41,6 +41,10 @@ export default {
     },
   },
   plugins: [
+    // eslint-disable-next-line no-undef
     require('@tailwindcss/forms'),
   ],
+  direction: {
+    ltr: "ltr",
+  },
 };

@@ -10,14 +10,29 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fullcalendar/core": "^6.1.9",
+    "@fullcalendar/daygrid": "^6.1.9",
+    "@fullcalendar/interaction": "^6.1.9",
+    "@fullcalendar/react": "^6.1.9",
+    "@fullcalendar/timegrid": "^6.1.9",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
+    "@tailwindcss/forms": "^0.5.6",
+    "@types/react-modal": "^3.16.2",
+    "axios": "^1.5.1",
+    "helmet": "^7.0.0",
+    "module_name": "^1.0.0",
     "react": "^18.2.0",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-color": "^2.19.3",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.16.0"
+    "react-helmet": "^6.1.0",
+    "react-modal": "^3.16.1",
+    "react-router-dom": "^6.17.0",
+    "redux": "^4.2.1"
   },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.6",
+    "@types/helmet": "^4.0.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",
@@ -27,11 +42,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "postcss": "^8.4.30",
-    "tailwindcss": "^3.3.3",
+    "tailwindcss": "^3.3.5",
     "vite": "^4.4.5"
-  },
-  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
-  "main": "postcss.config.js",
-  "author": "",
-  "license": "ISC"
+  }
 }
